@@ -1,0 +1,617 @@
+openapi: 3.0.0
+info:
+  title: Snapi (Sneakers API)
+  version: 1.0.0
+  description: API for managing sneakers, reviews, users, providers and stores
+servers:
+  - url: https://localhost:27017/snapi
+    description: V1
+
+tags:
+  - name: sneakers
+    description: Operations for managing sneakers inventory
+  - name: reviews
+    description: Operations for managing sneaker reviews
+  - name: users
+    description: Operations for managing user accounts
+  - name: providers
+    description: Operations for managing sneaker providers (brands)
+  - name: stores
+    description: Operations for managing stores
+
+paths:
+
+  # SNEAKERS
+
+  /sneakers:
+    get:
+      tags:
+        - sneakers
+      summary: List all sneakers
+      parameters:
+        - name: stock
+          in: query
+          schema:
+            type: string
+            enum: [low, high]
+          description: Filter by stock level (low < 50, high >= 50)
+        - name: release_date_after
+          in: query
+          schema:
+            type: string
+            format: date
+          description: Filter by release date (e.g., 2024-05-01)
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+          description: Maximum number of items to return (default 20)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sneaker'
+        '400':
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: No sneakers found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+
+    post:
+      tags:
+        - sneakers
+      summary: Create a new sneaker
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sneaker'
+      responses:
+        '201':
+          description: Sneaker created
+
+  /sneakers/{id}:
+    get:
+      tags:
+        - sneakers
+      summary: Get a specific sneaker
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sneaker'
+
+    put:
+      tags:
+        - sneakers
+      summary: Update a sneaker
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sneaker'
+      responses:
+        '200':
+          description: Sneaker updated
+
+    delete:
+      tags:
+        - sneakers
+      summary: Delete a sneaker
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Sneaker deleted
+
+
+  # REVIEWS
+
+  /sneakers/{sneakerId}/reviews:
+    get:
+      tags:
+        - reviews
+      summary: Get all reviews for a sneaker
+      parameters:
+        - name: sneakerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Review'
+
+    post:
+      tags:
+        - reviews
+      summary: Create a review for a sneaker
+      parameters:
+        - name: sneakerId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Review'
+      responses:
+        '201':
+          description: Review created
+
+  /reviews/{reviewId}:
+    get:
+      tags:
+        - reviews
+      summary: Get a specific review
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+
+    put:
+      tags:
+        - reviews
+      summary: Update a review
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Review'
+      responses:
+        '200':
+          description: Review updated
+
+    delete:
+      tags:
+        - reviews
+      summary: Delete a review
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Review deleted
+
+
+  # USERS
+
+  /users:
+    post:
+      tags:
+        - users
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: User created
+
+  /users/{id}:
+    get:
+      tags:
+        - users
+      summary: Get user details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+    put:
+      tags:
+        - users
+      summary: Update user details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: User updated
+
+    delete:
+      tags:
+        - users
+      summary: Delete a user
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: User deleted
+
+  /users/{id}/favorites:
+    get:
+      tags:
+        - users
+      summary: Get user's favorites
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sneaker'
+
+    post:
+      tags:
+        - users
+      summary: Add to favorites
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sneakerId:
+                  type: string
+      responses:
+        '201':
+          description: Added to favorites
+
+  /users/{id}/favorites/{sneakerId}:
+    delete:
+      tags:
+        - users
+      summary: Remove from favorites
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: sneakerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Favorite removed
+
+
+  # PROVIDERS
+
+  /providers:
+    get:
+      tags:
+        - providers
+      summary: List all providers
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Provider'
+
+    post:
+      tags:
+        - providers
+      summary: Create a new provider
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Provider'
+      responses:
+        '201':
+          description: Provider created
+
+  /providers/{id}:
+    get:
+      tags:
+        - providers
+      summary: Get provider details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Provider'
+
+    put:
+      tags:
+        - providers
+      summary: Update provider
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Provider'
+      responses:
+        '200':
+          description: Provider updated
+
+    delete:
+      tags:
+        - providers
+      summary: Delete a provider
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Provider deleted
+
+
+  # STORES
+
+  /stores:
+    get:
+      tags:
+        - stores
+      summary: List all stores
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Store'
+
+    post:
+      tags:
+        - stores
+      summary: Create a new store
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Store'
+      responses:
+        '201':
+          description: Store created
+
+  /stores/{id}:
+    get:
+      tags:
+        - stores
+      summary: Get store details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Store'
+
+    put:
+      tags:
+        - stores
+      summary: Update store
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Store'
+      responses:
+        '200':
+          description: Store updated
+
+    delete:
+      tags:
+        - stores
+      summary: Delete a store
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Store deleted
+
+components:
+  schemas:
+    Sneaker:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+        price:
+          type: number
+          format: float
+        stock:
+          type: integer
+        release_date:
+          type: string
+          format: date
+      required: [name, price]
+
+    Review:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        rating:
+          type: integer
+          minimum: 1
+          maximum: 5
+        comment:
+          type: string
+        userId:
+          type: string
+      required: [rating]
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+      required: [name, email]
+
+    Provider:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+        contact_email:
+          type: string
+          format: email
+      required: [name, contact_email]
+
+    Store:
+      type: object
+      properties:
+        id:
+          type: string
+        adress:
+          type: string
+
+    # Status code schemas
+
+    Error:
+      type: object
+      properties:
+        code: { type: string }
+        message: { type: string }
+      required: [error]
