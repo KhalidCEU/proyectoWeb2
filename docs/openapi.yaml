@@ -81,6 +81,15 @@ paths:
       responses:
         '201':
           description: Sneaker created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sneaker'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /sneakers/{id}:
     get:
@@ -100,7 +109,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Sneaker'
-
+        '404':
+          description: Sneaker not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
     put:
       tags:
         - sneakers
@@ -120,6 +133,20 @@ paths:
       responses:
         '200':
           description: Sneaker updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sneaker'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: Sneaker not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     delete:
       tags:
@@ -134,6 +161,11 @@ paths:
       responses:
         '204':
           description: Sneaker deleted
+        '404':
+          description: Sneaker not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
 
   # REVIEWS
@@ -158,7 +190,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Review'
-
+        '404':
+          description: Sneaker not found or no reviews available
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
     post:
       tags:
         - reviews
@@ -178,6 +214,15 @@ paths:
       responses:
         '201':
           description: Review created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+        '404':
+          description: Sneaker not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /reviews/{reviewId}:
     get:
@@ -197,6 +242,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Review'
+        '404':
+          description: Review not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     put:
       tags:
@@ -217,6 +267,20 @@ paths:
       responses:
         '200':
           description: Review updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Review'
+        '403':
+          description: Not authorized to update this review
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: Review not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     delete:
       tags:
@@ -231,6 +295,16 @@ paths:
       responses:
         '204':
           description: Review deleted
+        '403':
+          description: Not authorized to delete this review
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: Review not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
 
   # USERS
@@ -249,6 +323,15 @@ paths:
       responses:
         '201':
           description: User created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /users/{id}:
     get:
@@ -268,6 +351,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     put:
       tags:
@@ -288,6 +376,20 @@ paths:
       responses:
         '200':
           description: User updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     delete:
       tags:
@@ -302,6 +404,11 @@ paths:
       responses:
         '204':
           description: User deleted
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /users/{id}/favorites:
     get:
@@ -323,6 +430,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Sneaker'
+        '404':
+          description: User not found or no favorites available
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     post:
       tags:
@@ -346,6 +458,17 @@ paths:
       responses:
         '201':
           description: Added to favorites
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sneaker'
+        '404':
+          description: User or sneaker not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /users/{id}/favorites/{sneakerId}:
     delete:
@@ -366,7 +489,11 @@ paths:
       responses:
         '204':
           description: Favorite removed
-
+        '404':
+          description: User not found or sneaker not in favorites
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   # PROVIDERS
 
@@ -384,6 +511,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Provider'
+        '404':
+          description: No providers found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     post:
       tags:
@@ -398,6 +530,15 @@ paths:
       responses:
         '201':
           description: Provider created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Provider'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /providers/{id}:
     get:
@@ -417,6 +558,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Provider'
+        '404':
+          description: Provider not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     put:
       tags:
@@ -437,6 +583,20 @@ paths:
       responses:
         '200':
           description: Provider updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Provider'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: Provider not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     delete:
       tags:
@@ -451,7 +611,11 @@ paths:
       responses:
         '204':
           description: Provider deleted
-
+        '404':
+          description: Provider not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   # STORES
 
@@ -469,6 +633,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Store'
+        '404':
+          description: No stores found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     post:
       tags:
@@ -483,6 +652,15 @@ paths:
       responses:
         '201':
           description: Store created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Store'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
   /stores/{id}:
     get:
@@ -502,6 +680,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Store'
+        '404':
+          description: Store not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     put:
       tags:
@@ -522,6 +705,20 @@ paths:
       responses:
         '200':
           description: Store updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Store'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '404':
+          description: Store not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
     delete:
       tags:
@@ -536,6 +733,11 @@ paths:
       responses:
         '204':
           description: Store deleted
+        '404':
+          description: Store not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
 
 components:
   schemas:
