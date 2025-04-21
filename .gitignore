@@ -2,6 +2,9 @@
 .env
 !.env.example
 
+# MacOS files
+.DS_Store
+
 # Node modules
 node_modules/
 
