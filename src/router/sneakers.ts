@@ -9,11 +9,14 @@ import {
 
 const sneakersRouter = express.Router();
 
+// GET
 sneakersRouter.get('/', getSneakers);
 sneakersRouter.get('/:sneakerId', getSneakerById);
 
+// POST
 sneakersRouter.post('/', createSneaker);
 
+// PUT
 sneakersRouter.put('/:sneakerId', updateSneakerById);
 
 // DELETE
