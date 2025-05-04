@@ -1,11 +1,6 @@
 import { Sneaker } from "../schemas/sneaker";
 import { getCurrencyRate } from "./utils/currency";
 
-interface SneakerQuery {
-    _id?: string;
-    releaseDate?: { $gte: Date };
-}
-
 export const getSneakers = async (req, res) => {
     try {
         const { release_date_after, limit = 20, currency } = req.query;
