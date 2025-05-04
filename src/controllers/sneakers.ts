@@ -35,6 +35,7 @@ export const getSneakers = async (req, res) => {
 
         let currencyRate = 1;
 
+        // Currency conversion handling
         if (currency) {
             try {
                 currencyRate = await getCurrencyRate(currency);
