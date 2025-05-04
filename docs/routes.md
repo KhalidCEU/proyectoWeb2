@@ -14,12 +14,19 @@ Query Parameters:
     - Minimum: 1
     - Maximum: 100
     - Default: 20
+- `currency`: Currency in which prices should be returned. See [currencies.md](/docs/currencies.md) for the list of **valid** currencies.
+    - Type: string
+
+    By default the prices are in USD.
 
 Examples:
 ```
-/sneakers?limit=10                         # Show only 10 sneakers
-/sneakers?release_date_after=2022-05-01    # Show sneakers released after May 1st, 2022
-/sneakers?currency=eur                     # Show sneakers with prices converted to EUR
+/sneakers?limit=10                         # Get only 10 sneakers
+/sneakers?release_date_after=2022-05-01    # Get sneakers released after May 1st, 2022
+/sneakers?currency=eur                     # Get sneakers with prices converted to EUR
+
+# Get 2 sneakers released after October 22, 2021, priced in EUR
+sneakers?currency=eur&limit=2&release_date_after=2021-10-22
 ```
 
 **GET**	/sneakers/{id} : Get a specific sneaker information
