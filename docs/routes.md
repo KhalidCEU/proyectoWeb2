@@ -1,6 +1,6 @@
-
-
 ## Snapi API routes
+
+> Note: **All routes are prefixed with `/api/` (e.g., `/api/sneakers`).**
 
 ### Sneakers
 
@@ -19,6 +19,7 @@ Examples:
 ```
 /sneakers?limit=10                         # Show only 10 sneakers
 /sneakers?release_date_after=2022-05-01    # Show sneakers released after May 1st, 2022
+/sneakers?currency=eur                     # Show sneakers with prices converted to EUR
 ```
 
 **GET**	/sneakers/{id} : Get a specific sneaker information
