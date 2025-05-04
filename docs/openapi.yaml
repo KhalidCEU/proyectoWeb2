@@ -43,6 +43,12 @@ paths:
             minimum: 1
             maximum: 100
           description: Maximum number of items to return (default 20)
+        - name: currency
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Convert to a specific currency (e.g., 'eur'). See docs/currencies.md for more details.
       responses:
         '200':
           description: Successful response
@@ -769,9 +775,11 @@ components:
         retail_price:
           type: number
           format: float
+          description: By default the price is in USD.
         sales_price:
           type: number
           format: float
+          description: By default the price is in USD.
       required: [name, retail_price]
 
     Review:

@@ -1,4 +1,5 @@
 import { Sneaker } from "../schemas/sneaker";
+import { getCurrencyRate } from "./utils/currency";
 
 interface SneakerQuery {
     _id?: string;
@@ -7,7 +8,7 @@ interface SneakerQuery {
 
 export const getSneakers = async (req, res) => {
     try {
-        const { release_date_after, limit = 20 } = req.query;
+        const { release_date_after, limit = 20, currency } = req.query;
 
         let query = {};
 
@@ -32,18 +33,37 @@ export const getSneakers = async (req, res) => {
             });
         }
 
+        let currencyRate = 1;
+
+        if (currency) {
+            try {
+                currencyRate = await getCurrencyRate(currency);
+            } catch (error) {
+                return res.status(400).json({
+                    message: 'Invalid currency',
+                    status: 'failure'
+                });
+            }
+        }
+
         const sneakers = await Sneaker.find(query).limit(Number(limit));
 
-        if (!sneakers) {
+        if (!sneakers || sneakers.length === 0) {
             return res.status(404).json({
                 message: 'No sneakers found',
                 status: 'failure'
             });
         }
 
+        const convertedSneakers = sneakers.map((sneaker) => ({
+            ...sneaker.toObject(),
+            retail_price: Math.round(sneaker.retail_price * currencyRate * 100) / 100,
+            sales_price: Math.round(sneaker.sales_price * currencyRate * 100) / 100
+        }));
+
         return res.status(200).json({
-            items: sneakers,
-            count: sneakers.length,
+            items: convertedSneakers,
+            count: convertedSneakers.length,
             message: 'Sneakers data fetched successfully',
             status: 'success'
         });
