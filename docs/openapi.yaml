@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: API for managing sneakers, reviews, users, providers and stores
 servers:
-  - url: https://localhost:27017/snapi
+  - url: http://localhost:8080/api
     description: V1
 
 tags:
@@ -24,17 +24,12 @@ paths:
   # SNEAKERS
 
   /sneakers:
+
     get:
       tags:
         - sneakers
       summary: List all sneakers
       parameters:
-        - name: stock
-          in: query
-          schema:
-            type: string
-            enum: [low, high]
-          description: Filter by stock level (low < 50, high >= 50)
         - name: release_date_after
           in: query
           schema:
@@ -48,15 +43,19 @@ paths:
             minimum: 1
             maximum: 100
           description: Maximum number of items to return (default 20)
+        - name: currency
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Convert to a specific currency (e.g., 'eur'). See docs/currencies.md for more details.
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/SneakersResponse'
         '400':
           description: Invalid query parameters
           content:
@@ -741,23 +740,47 @@ paths:
 
 components:
   schemas:
+
+    SneakersResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sneaker'
+        count:
+          type: integer
+        message:
+          type: string
+        status:
+          type: string
+
     Sneaker:
       type: object
       properties:
-        id:
+        _id:
           type: string
           readOnly: true
         name:
           type: string
-        price:
-          type: number
-          format: float
-        stock:
-          type: integer
+        color:
+          type: string
         release_date:
           type: string
-          format: date
-      required: [name, price]
+          format: date-time
+        brand:
+          type: string
+        modelKey:
+          type: string
+        retail_price:
+          type: number
+          format: float
+          description: By default the price is in USD.
+        sales_price:
+          type: number
+          format: float
+          description: By default the price is in USD.
+      required: [name, retail_price]
 
     Review:
       type: object

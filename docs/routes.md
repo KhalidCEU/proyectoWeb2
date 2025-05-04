@@ -1,22 +1,32 @@
-
-
 ## Snapi API routes
+
+> Note: **All routes are prefixed with `/api/` (e.g., `/api/sneakers`).**
 
 ### Sneakers
 
 **GET**	/sneakers : List all sneakers
 
 Query Parameters:
-- `stock`: Filter by stock level
-    - `low`: Less than 50 items
-    - `high`: 50 items or more
-- `release_date_after`: Filter by release date (Format: YYYY-MM-DD)
-- `limit`: Maximum number of results to return (default: 20, max: 100)
+- `release_date_after`: Filter by release date (e.g., 2024-05-01)
+    - Type: string (date)
+- `limit`: Maximum number of items to return
+    - Type: integer
+    - Minimum: 1
+    - Maximum: 100
+    - Default: 20
+- `currency`: Currency in which prices should be returned. See [currencies.md](/docs/currencies.md) for the list of **valid** currencies.
+    - Type: string
+
+    By default the prices are in USD.
 
 Examples:
 ```
-/sneakers?stock=low                      # Show sneakers with low stock
-/sneakers?release_date_after=2024-05-01  # Show upcoming releases
+/sneakers?limit=10                         # Get only 10 sneakers
+/sneakers?release_date_after=2022-05-01    # Get sneakers released after May 1st, 2022
+/sneakers?currency=eur                     # Get sneakers with prices converted to EUR
+
+# Get 2 sneakers released after October 22, 2021, priced in EUR
+sneakers?currency=eur&limit=2&release_date_after=2021-10-22
 ```
 
 **GET**	/sneakers/{id} : Get a specific sneaker information

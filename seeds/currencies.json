@@ -1,0 +1,2367 @@
+[{
+	"_id": "68175856e1aeead2aa0babd9",
+	"date": "2025-05-04",
+	"currency": "1inch",
+	"__v": 0,
+	"rate": 5.0268882
+},
+{
+	"_id": "68175856e1aeead2aa0babda",
+	"date": "2025-05-04",
+	"currency": "aave",
+	"__v": 0,
+	"rate": 0.0056416819
+},
+{
+	"_id": "68175856e1aeead2aa0babdb",
+	"date": "2025-05-04",
+	"currency": "ada",
+	"__v": 0,
+	"rate": 1.40537791
+},
+{
+	"_id": "68175856e1aeead2aa0babdc",
+	"date": "2025-05-04",
+	"currency": "aed",
+	"__v": 0,
+	"rate": 3.6725
+},
+{
+	"_id": "68175856e1aeead2aa0babdd",
+	"date": "2025-05-04",
+	"currency": "afn",
+	"__v": 0,
+	"rate": 70.84750765
+},
+{
+	"_id": "68175856e1aeead2aa0babde",
+	"date": "2025-05-04",
+	"currency": "akt",
+	"__v": 0,
+	"rate": 0.67364673
+},
+{
+	"_id": "68175856e1aeead2aa0babdf",
+	"date": "2025-05-04",
+	"currency": "algo",
+	"__v": 0,
+	"rate": 4.80747858
+},
+{
+	"_id": "68175856e1aeead2aa0babe0",
+	"date": "2025-05-04",
+	"currency": "all",
+	"__v": 0,
+	"rate": 86.88664922
+},
+{
+	"_id": "68175856e1aeead2aa0babe1",
+	"date": "2025-05-04",
+	"currency": "amd",
+	"__v": 0,
+	"rate": 389.39353895
+},
+{
+	"_id": "68175856e1aeead2aa0babe2",
+	"date": "2025-05-04",
+	"currency": "amp",
+	"__v": 0,
+	"rate": 251.51118881
+},
+{
+	"_id": "68175856e1aeead2aa0babe3",
+	"date": "2025-05-04",
+	"currency": "ang",
+	"__v": 0,
+	"rate": 1.79000067
+},
+{
+	"_id": "68175856e1aeead2aa0babe4",
+	"date": "2025-05-04",
+	"currency": "aoa",
+	"__v": 0,
+	"rate": 919.17649869
+},
+{
+	"_id": "68175856e1aeead2aa0babe5",
+	"date": "2025-05-04",
+	"currency": "ape",
+	"__v": 0,
+	"rate": 1.99921508
+},
+{
+	"_id": "68175856e1aeead2aa0babe6",
+	"date": "2025-05-04",
+	"currency": "apt",
+	"__v": 0,
+	"rate": 0.19250332
+},
+{
+	"_id": "68175856e1aeead2aa0babe7",
+	"date": "2025-05-04",
+	"currency": "ar",
+	"__v": 0,
+	"rate": 0.1385348
+},
+{
+	"_id": "68175856e1aeead2aa0babe8",
+	"date": "2025-05-04",
+	"currency": "arb",
+	"__v": 0,
+	"rate": 3.12131053
+},
+{
+	"_id": "68175856e1aeead2aa0babe9",
+	"date": "2025-05-04",
+	"currency": "ars",
+	"__v": 0,
+	"rate": 1170.51489376
+},
+{
+	"_id": "68175856e1aeead2aa0babea",
+	"date": "2025-05-04",
+	"currency": "atom",
+	"__v": 0,
+	"rate": 0.23652279
+},
+{
+	"_id": "68175856e1aeead2aa0babeb",
+	"date": "2025-05-04",
+	"currency": "ats",
+	"__v": 0,
+	"rate": 12.17548616
+},
+{
+	"_id": "68175856e1aeead2aa0babec",
+	"date": "2025-05-04",
+	"currency": "aud",
+	"__v": 0,
+	"rate": 1.55156755
+},
+{
+	"_id": "68175856e1aeead2aa0babed",
+	"date": "2025-05-04",
+	"currency": "avax",
+	"__v": 0,
+	"rate": 0.048726661
+},
+{
+	"_id": "68175856e1aeead2aa0babee",
+	"date": "2025-05-04",
+	"currency": "awg",
+	"__v": 0,
+	"rate": 1.79
+},
+{
+	"_id": "68175856e1aeead2aa0babef",
+	"date": "2025-05-04",
+	"currency": "axs",
+	"__v": 0,
+	"rate": 0.40909933
+},
+{
+	"_id": "68175856e1aeead2aa0babf0",
+	"date": "2025-05-04",
+	"currency": "azm",
+	"__v": 0,
+	"rate": 8500
+},
+{
+	"_id": "68175856e1aeead2aa0babf1",
+	"date": "2025-05-04",
+	"currency": "azn",
+	"__v": 0,
+	"rate": 1.7
+},
+{
+	"_id": "68175856e1aeead2aa0babf2",
+	"date": "2025-05-04",
+	"currency": "bake",
+	"__v": 0,
+	"rate": 8.56639591
+},
+{
+	"_id": "68175856e1aeead2aa0babf3",
+	"date": "2025-05-04",
+	"currency": "bam",
+	"__v": 0,
+	"rate": 1.73057136
+},
+{
+	"_id": "68175856e1aeead2aa0babf4",
+	"date": "2025-05-04",
+	"currency": "bat",
+	"__v": 0,
+	"rate": 6.92598664
+},
+{
+	"_id": "68175856e1aeead2aa0babf5",
+	"date": "2025-05-04",
+	"currency": "bbd",
+	"__v": 0,
+	"rate": 2
+},
+{
+	"_id": "68175856e1aeead2aa0babf6",
+	"date": "2025-05-04",
+	"currency": "bch",
+	"__v": 0,
+	"rate": 0.0027414519
+},
+{
+	"_id": "68175856e1aeead2aa0babf7",
+	"date": "2025-05-04",
+	"currency": "bdt",
+	"__v": 0,
+	"rate": 121.56465458
+},
+{
+	"_id": "68175856e1aeead2aa0babf8",
+	"date": "2025-05-04",
+	"currency": "bef",
+	"__v": 0,
+	"rate": 35.69383619
+},
+{
+	"_id": "68175856e1aeead2aa0babf9",
+	"date": "2025-05-04",
+	"currency": "bgn",
+	"__v": 0,
+	"rate": 1.73057136
+},
+{
+	"_id": "68175856e1aeead2aa0babfa",
+	"date": "2025-05-04",
+	"currency": "bhd",
+	"__v": 0,
+	"rate": 0.376
+},
+{
+	"_id": "68175856e1aeead2aa0babfb",
+	"date": "2025-05-04",
+	"currency": "bif",
+	"__v": 0,
+	"rate": 2926.13663297
+},
+{
+	"_id": "68175856e1aeead2aa0babfc",
+	"date": "2025-05-04",
+	"currency": "bmd",
+	"__v": 0,
+	"rate": 1
+},
+{
+	"_id": "68175856e1aeead2aa0babfd",
+	"date": "2025-05-04",
+	"currency": "bnb",
+	"__v": 0,
+	"rate": 0.0016665133
+},
+{
+	"_id": "68175856e1aeead2aa0babfe",
+	"date": "2025-05-04",
+	"currency": "bnd",
+	"__v": 0,
+	"rate": 1.29933825
+},
+{
+	"_id": "68175856e1aeead2aa0babff",
+	"date": "2025-05-04",
+	"currency": "bob",
+	"__v": 0,
+	"rate": 6.92496235
+},
+{
+	"_id": "68175856e1aeead2aa0bac00",
+	"date": "2025-05-04",
+	"currency": "brl",
+	"__v": 0,
+	"rate": 5.65839456
+},
+{
+	"_id": "68175856e1aeead2aa0bac01",
+	"date": "2025-05-04",
+	"currency": "bsd",
+	"__v": 0,
+	"rate": 1
+},
+{
+	"_id": "68175856e1aeead2aa0bac02",
+	"date": "2025-05-04",
+	"currency": "bsv",
+	"__v": 0,
+	"rate": 0.026780833
+},
+{
+	"_id": "68175856e1aeead2aa0bac03",
+	"date": "2025-05-04",
+	"currency": "bsw",
+	"__v": 0,
+	"rate": 24.31400819
+},
+{
+	"_id": "68175856e1aeead2aa0bac04",
+	"date": "2025-05-04",
+	"currency": "btc",
+	"__v": 0,
+	"rate": 1.03943E-05
+},
+{
+	"_id": "68175856e1aeead2aa0bac05",
+	"date": "2025-05-04",
+	"currency": "btcb",
+	"__v": 0,
+	"rate": 4.18096462
+},
+{
+	"_id": "68175856e1aeead2aa0bac06",
+	"date": "2025-05-04",
+	"currency": "btg",
+	"__v": 0,
+	"rate": 1.12360257
+},
+{
+	"_id": "68175856e1aeead2aa0bac07",
+	"date": "2025-05-04",
+	"currency": "btn",
+	"__v": 0,
+	"rate": 84.56934601
+},
+{
+	"_id": "68175856e1aeead2aa0bac08",
+	"date": "2025-05-04",
+	"currency": "btt",
+	"__v": 0,
+	"rate": 1.34124153093475E+06
+},
+{
+	"_id": "68175856e1aeead2aa0bac09",
+	"date": "2025-05-04",
+	"currency": "busd",
+	"__v": 0,
+	"rate": 1.00015148
+},
+{
+	"_id": "68175856e1aeead2aa0bac0a",
+	"date": "2025-05-04",
+	"currency": "bwp",
+	"__v": 0,
+	"rate": 13.62387035
+},
+{
+	"_id": "68175856e1aeead2aa0bac0b",
+	"date": "2025-05-04",
+	"currency": "byn",
+	"__v": 0,
+	"rate": 3.27574624
+},
+{
+	"_id": "68175856e1aeead2aa0bac0c",
+	"date": "2025-05-04",
+	"currency": "byr",
+	"__v": 0,
+	"rate": 32757.46243273
+},
+{
+	"_id": "68175856e1aeead2aa0bac0d",
+	"date": "2025-05-04",
+	"currency": "bzd",
+	"__v": 0,
+	"rate": 2.0176935
+},
+{
+	"_id": "68175856e1aeead2aa0bac0e",
+	"date": "2025-05-04",
+	"currency": "cad",
+	"__v": 0,
+	"rate": 1.38211772
+},
+{
+	"_id": "68175856e1aeead2aa0bac0f",
+	"date": "2025-05-04",
+	"currency": "cake",
+	"__v": 0,
+	"rate": 0.5024722
+},
+{
+	"_id": "68175856e1aeead2aa0bac10",
+	"date": "2025-05-04",
+	"currency": "cdf",
+	"__v": 0,
+	"rate": 2851.7820955
+},
+{
+	"_id": "68175856e1aeead2aa0bac11",
+	"date": "2025-05-04",
+	"currency": "celo",
+	"__v": 0,
+	"rate": 2.89058764
+},
+{
+	"_id": "68175856e1aeead2aa0bac12",
+	"date": "2025-05-04",
+	"currency": "cfx",
+	"__v": 0,
+	"rate": 13.67468157
+},
+{
+	"_id": "68175856e1aeead2aa0bac13",
+	"date": "2025-05-04",
+	"currency": "chf",
+	"__v": 0,
+	"rate": 0.8265533
+},
+{
+	"_id": "68175856e1aeead2aa0bac14",
+	"date": "2025-05-04",
+	"currency": "chz",
+	"__v": 0,
+	"rate": 24.90626375
+},
+{
+	"_id": "68175856e1aeead2aa0bac15",
+	"date": "2025-05-04",
+	"currency": "clp",
+	"__v": 0,
+	"rate": 947.22571713
+},
+{
+	"_id": "68175856e1aeead2aa0bac16",
+	"date": "2025-05-04",
+	"currency": "cnh",
+	"__v": 0,
+	"rate": 7.23020025
+},
+{
+	"_id": "68175856e1aeead2aa0bac17",
+	"date": "2025-05-04",
+	"currency": "cny",
+	"__v": 0,
+	"rate": 7.27132692
+},
+{
+	"_id": "68175856e1aeead2aa0bac18",
+	"date": "2025-05-04",
+	"currency": "comp",
+	"__v": 0,
+	"rate": 0.025009529
+},
+{
+	"_id": "68175856e1aeead2aa0bac19",
+	"date": "2025-05-04",
+	"currency": "cop",
+	"__v": 0,
+	"rate": 4244.8017371
+},
+{
+	"_id": "68175856e1aeead2aa0bac1a",
+	"date": "2025-05-04",
+	"currency": "crc",
+	"__v": 0,
+	"rate": 506.56828476
+},
+{
+	"_id": "68175856e1aeead2aa0bac1b",
+	"date": "2025-05-04",
+	"currency": "cro",
+	"__v": 0,
+	"rate": 11.18949477
+},
+{
+	"_id": "68175856e1aeead2aa0bac1c",
+	"date": "2025-05-04",
+	"currency": "crv",
+	"__v": 0,
+	"rate": 1.42191133
+},
+{
+	"_id": "68175856e1aeead2aa0bac1d",
+	"date": "2025-05-04",
+	"currency": "cspr",
+	"__v": 0,
+	"rate": 68.80392183
+},
+{
+	"_id": "68175856e1aeead2aa0bac1e",
+	"date": "2025-05-04",
+	"currency": "cuc",
+	"__v": 0,
+	"rate": 1
+},
+{
+	"_id": "68175856e1aeead2aa0bac1f",
+	"date": "2025-05-04",
+	"currency": "cup",
+	"__v": 0,
+	"rate": 23.94125693
+},
+{
+	"_id": "68175856e1aeead2aa0bac20",
+	"date": "2025-05-04",
+	"currency": "cve",
+	"__v": 0,
+	"rate": 97.56988284
+},
+{
+	"_id": "68175856e1aeead2aa0bac21",
+	"date": "2025-05-04",
+	"currency": "cvx",
+	"__v": 0,
+	"rate": 0.32524699
+},
+{
+	"_id": "68175856e1aeead2aa0bac22",
+	"date": "2025-05-04",
+	"currency": "cyp",
+	"__v": 0,
+	"rate": 0.51786629
+},
+{
+	"_id": "68175856e1aeead2aa0bac23",
+	"date": "2025-05-04",
+	"currency": "czk",
+	"__v": 0,
+	"rate": 22.04670917
+},
+{
+	"_id": "68175856e1aeead2aa0bac24",
+	"date": "2025-05-04",
+	"currency": "dai",
+	"__v": 0,
+	"rate": 1.00007257
+},
+{
+	"_id": "68175856e1aeead2aa0bac25",
+	"date": "2025-05-04",
+	"currency": "dash",
+	"__v": 0,
+	"rate": 0.044874491
+},
+{
+	"_id": "68175856e1aeead2aa0bac26",
+	"date": "2025-05-04",
+	"currency": "dcr",
+	"__v": 0,
+	"rate": 0.081138652
+},
+{
+	"_id": "68175856e1aeead2aa0bac27",
+	"date": "2025-05-04",
+	"currency": "dem",
+	"__v": 0,
+	"rate": 1.73057136
+},
+{
+	"_id": "68175856e1aeead2aa0bac28",
+	"date": "2025-05-04",
+	"currency": "dfi",
+	"__v": 0,
+	"rate": 129.86101421
+},
+{
+	"_id": "68175856e1aeead2aa0bac29",
+	"date": "2025-05-04",
+	"currency": "djf",
+	"__v": 0,
+	"rate": 178.39958576
+},
+{
+	"_id": "68175856e1aeead2aa0bac2a",
+	"date": "2025-05-04",
+	"currency": "dkk",
+	"__v": 0,
+	"rate": 6.60272539
+},
+{
+	"_id": "68175856e1aeead2aa0bac2b",
+	"date": "2025-05-04",
+	"currency": "doge",
+	"__v": 0,
+	"rate": 5.65354398
+},
+{
+	"_id": "68175856e1aeead2aa0bac2c",
+	"date": "2025-05-04",
+	"currency": "dop",
+	"__v": 0,
+	"rate": 58.77739228
+},
+{
+	"_id": "68175856e1aeead2aa0bac2d",
+	"date": "2025-05-04",
+	"currency": "dot",
+	"__v": 0,
+	"rate": 0.24766308
+},
+{
+	"_id": "68175856e1aeead2aa0bac2e",
+	"date": "2025-05-04",
+	"currency": "dydx",
+	"__v": 0,
+	"rate": 1.63894815
+},
+{
+	"_id": "68175856e1aeead2aa0bac2f",
+	"date": "2025-05-04",
+	"currency": "dzd",
+	"__v": 0,
+	"rate": 133.17286461
+},
+{
+	"_id": "68175856e1aeead2aa0bac30",
+	"date": "2025-05-04",
+	"currency": "eek",
+	"__v": 0,
+	"rate": 13.84457089
+},
+{
+	"_id": "68175856e1aeead2aa0bac31",
+	"date": "2025-05-04",
+	"currency": "egld",
+	"__v": 0,
+	"rate": 0.062260131
+},
+{
+	"_id": "68175856e1aeead2aa0bac32",
+	"date": "2025-05-04",
+	"currency": "egp",
+	"__v": 0,
+	"rate": 50.76796101
+},
+{
+	"_id": "68175856e1aeead2aa0bac33",
+	"date": "2025-05-04",
+	"currency": "enj",
+	"__v": 0,
+	"rate": 13.2720635
+},
+{
+	"_id": "68175856e1aeead2aa0bac34",
+	"date": "2025-05-04",
+	"currency": "eos",
+	"__v": 0,
+	"rate": 1.38125893
+},
+{
+	"_id": "68175856e1aeead2aa0bac35",
+	"date": "2025-05-04",
+	"currency": "ern",
+	"__v": 0,
+	"rate": 15
+},
+{
+	"_id": "68175856e1aeead2aa0bac36",
+	"date": "2025-05-04",
+	"currency": "esp",
+	"__v": 0,
+	"rate": 147.22283964
+},
+{
+	"_id": "68175856e1aeead2aa0bac37",
+	"date": "2025-05-04",
+	"currency": "etb",
+	"__v": 0,
+	"rate": 132.24256973
+},
+{
+	"_id": "68175856e1aeead2aa0bac38",
+	"date": "2025-05-04",
+	"currency": "etc",
+	"__v": 0,
+	"rate": 0.059763065
+},
+{
+	"_id": "68175856e1aeead2aa0bac39",
+	"date": "2025-05-04",
+	"currency": "eth",
+	"__v": 0,
+	"rate": 0.0005421668
+},
+{
+	"_id": "68175856e1aeead2aa0bac3a",
+	"date": "2025-05-04",
+	"currency": "eur",
+	"__v": 0,
+	"rate": 0.88482709
+},
+{
+	"_id": "68175856e1aeead2aa0bac3b",
+	"date": "2025-05-04",
+	"currency": "fei",
+	"__v": 0,
+	"rate": 1.00234748
+},
+{
+	"_id": "68175856e1aeead2aa0bac3c",
+	"date": "2025-05-04",
+	"currency": "fil",
+	"__v": 0,
+	"rate": 0.37575173
+},
+{
+	"_id": "68175856e1aeead2aa0bac3d",
+	"date": "2025-05-04",
+	"currency": "fim",
+	"__v": 0,
+	"rate": 5.26094295
+},
+{
+	"_id": "68175856e1aeead2aa0bac3e",
+	"date": "2025-05-04",
+	"currency": "fjd",
+	"__v": 0,
+	"rate": 2.2825574
+},
+{
+	"_id": "68175856e1aeead2aa0bac3f",
+	"date": "2025-05-04",
+	"currency": "fkp",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bac40",
+	"date": "2025-05-04",
+	"currency": "flow",
+	"__v": 0,
+	"rate": 2.61210077
+},
+{
+	"_id": "68175856e1aeead2aa0bac41",
+	"date": "2025-05-04",
+	"currency": "flr",
+	"__v": 0,
+	"rate": 52.14823968
+},
+{
+	"_id": "68175856e1aeead2aa0bac42",
+	"date": "2025-05-04",
+	"currency": "frax",
+	"__v": 0,
+	"rate": 0.9998912
+},
+{
+	"_id": "68175856e1aeead2aa0bac43",
+	"date": "2025-05-04",
+	"currency": "frf",
+	"__v": 0,
+	"rate": 5.80408521
+},
+{
+	"_id": "68175856e1aeead2aa0bac44",
+	"date": "2025-05-04",
+	"currency": "ftt",
+	"__v": 0,
+	"rate": 0.95428246
+},
+{
+	"_id": "68175856e1aeead2aa0bac45",
+	"date": "2025-05-04",
+	"currency": "fxs",
+	"__v": 0,
+	"rate": 0.45471709
+},
+{
+	"_id": "68175856e1aeead2aa0bac46",
+	"date": "2025-05-04",
+	"currency": "gala",
+	"__v": 0,
+	"rate": 63.76540476
+},
+{
+	"_id": "68175856e1aeead2aa0bac47",
+	"date": "2025-05-04",
+	"currency": "gbp",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bac48",
+	"date": "2025-05-04",
+	"currency": "gel",
+	"__v": 0,
+	"rate": 2.74830007
+},
+{
+	"_id": "68175856e1aeead2aa0bac49",
+	"date": "2025-05-04",
+	"currency": "ggp",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bac4a",
+	"date": "2025-05-04",
+	"currency": "ghc",
+	"__v": 0,
+	"rate": 139028.7882215
+},
+{
+	"_id": "68175856e1aeead2aa0bac4b",
+	"date": "2025-05-04",
+	"currency": "ghs",
+	"__v": 0,
+	"rate": 13.90287882
+},
+{
+	"_id": "68175856e1aeead2aa0bac4c",
+	"date": "2025-05-04",
+	"currency": "gip",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bac4d",
+	"date": "2025-05-04",
+	"currency": "gmd",
+	"__v": 0,
+	"rate": 71.46507279
+},
+{
+	"_id": "68175856e1aeead2aa0bac4e",
+	"date": "2025-05-04",
+	"currency": "gmx",
+	"__v": 0,
+	"rate": 0.073815018
+},
+{
+	"_id": "68175856e1aeead2aa0bac4f",
+	"date": "2025-05-04",
+	"currency": "gnf",
+	"__v": 0,
+	"rate": 8683.13789581
+},
+{
+	"_id": "68175856e1aeead2aa0bac50",
+	"date": "2025-05-04",
+	"currency": "gno",
+	"__v": 0,
+	"rate": 0.0090097949
+},
+{
+	"_id": "68175856e1aeead2aa0bac51",
+	"date": "2025-05-04",
+	"currency": "grd",
+	"__v": 0,
+	"rate": 301.50482977
+},
+{
+	"_id": "68175856e1aeead2aa0bac52",
+	"date": "2025-05-04",
+	"currency": "grt",
+	"__v": 0,
+	"rate": 10.69722401
+},
+{
+	"_id": "68175856e1aeead2aa0bac53",
+	"date": "2025-05-04",
+	"currency": "gt",
+	"__v": 0,
+	"rate": 0.04608468
+},
+{
+	"_id": "68175856e1aeead2aa0bac54",
+	"date": "2025-05-04",
+	"currency": "gtq",
+	"__v": 0,
+	"rate": 7.69097838
+},
+{
+	"_id": "68175856e1aeead2aa0bac55",
+	"date": "2025-05-04",
+	"currency": "gusd",
+	"__v": 0,
+	"rate": 0.9998426
+},
+{
+	"_id": "68175856e1aeead2aa0bac56",
+	"date": "2025-05-04",
+	"currency": "gyd",
+	"__v": 0,
+	"rate": 208.98279188
+},
+{
+	"_id": "68175856e1aeead2aa0bac57",
+	"date": "2025-05-04",
+	"currency": "hbar",
+	"__v": 0,
+	"rate": 5.43548868
+},
+{
+	"_id": "68175856e1aeead2aa0bac58",
+	"date": "2025-05-04",
+	"currency": "hkd",
+	"__v": 0,
+	"rate": 7.75049885
+},
+{
+	"_id": "68175856e1aeead2aa0bac59",
+	"date": "2025-05-04",
+	"currency": "hnl",
+	"__v": 0,
+	"rate": 25.81181737
+},
+{
+	"_id": "68175856e1aeead2aa0bac5a",
+	"date": "2025-05-04",
+	"currency": "hnt",
+	"__v": 0,
+	"rate": 0.2619246
+},
+{
+	"_id": "68175856e1aeead2aa0bac5b",
+	"date": "2025-05-04",
+	"currency": "hot",
+	"__v": 0,
+	"rate": 1032.10059501
+},
+{
+	"_id": "68175856e1aeead2aa0bac5c",
+	"date": "2025-05-04",
+	"currency": "hrk",
+	"__v": 0,
+	"rate": 6.66672968
+},
+{
+	"_id": "68175856e1aeead2aa0bac5d",
+	"date": "2025-05-04",
+	"currency": "ht",
+	"__v": 0,
+	"rate": 3.35278676
+},
+{
+	"_id": "68175856e1aeead2aa0bac5e",
+	"date": "2025-05-04",
+	"currency": "htg",
+	"__v": 0,
+	"rate": 132.87614611
+},
+{
+	"_id": "68175856e1aeead2aa0bac5f",
+	"date": "2025-05-04",
+	"currency": "huf",
+	"__v": 0,
+	"rate": 357.94136279
+},
+{
+	"_id": "68175856e1aeead2aa0bac60",
+	"date": "2025-05-04",
+	"currency": "icp",
+	"__v": 0,
+	"rate": 0.21147992
+},
+{
+	"_id": "68175856e1aeead2aa0bac61",
+	"date": "2025-05-04",
+	"currency": "idr",
+	"__v": 0,
+	"rate": 16530.79536522
+},
+{
+	"_id": "68175856e1aeead2aa0bac62",
+	"date": "2025-05-04",
+	"currency": "iep",
+	"__v": 0,
+	"rate": 0.69685796
+},
+{
+	"_id": "68175856e1aeead2aa0bac63",
+	"date": "2025-05-04",
+	"currency": "ils",
+	"__v": 0,
+	"rate": 3.59992799
+},
+{
+	"_id": "68175856e1aeead2aa0bac64",
+	"date": "2025-05-04",
+	"currency": "imp",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bac65",
+	"date": "2025-05-04",
+	"currency": "imx",
+	"__v": 0,
+	"rate": 1.75998698
+},
+{
+	"_id": "68175856e1aeead2aa0bac66",
+	"date": "2025-05-04",
+	"currency": "inj",
+	"__v": 0,
+	"rate": 0.10371643
+},
+{
+	"_id": "68175856e1aeead2aa0bac67",
+	"date": "2025-05-04",
+	"currency": "inr",
+	"__v": 0,
+	"rate": 84.56934601
+},
+{
+	"_id": "68175856e1aeead2aa0bac68",
+	"date": "2025-05-04",
+	"currency": "iqd",
+	"__v": 0,
+	"rate": 1310.26029861
+},
+{
+	"_id": "68175856e1aeead2aa0bac69",
+	"date": "2025-05-04",
+	"currency": "irr",
+	"__v": 0,
+	"rate": 42002.55051116
+},
+{
+	"_id": "68175856e1aeead2aa0bac6a",
+	"date": "2025-05-04",
+	"currency": "isk",
+	"__v": 0,
+	"rate": 128.70399747
+},
+{
+	"_id": "68175856e1aeead2aa0bac6b",
+	"date": "2025-05-04",
+	"currency": "itl",
+	"__v": 0,
+	"rate": 1713.26414303
+},
+{
+	"_id": "68175856e1aeead2aa0bac6c",
+	"date": "2025-05-04",
+	"currency": "jep",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bac6d",
+	"date": "2025-05-04",
+	"currency": "jmd",
+	"__v": 0,
+	"rate": 158.51019567
+},
+{
+	"_id": "68175856e1aeead2aa0bac6e",
+	"date": "2025-05-04",
+	"currency": "jod",
+	"__v": 0,
+	"rate": 0.709
+},
+{
+	"_id": "68175856e1aeead2aa0bac6f",
+	"date": "2025-05-04",
+	"currency": "jpy",
+	"__v": 0,
+	"rate": 144.92456311
+},
+{
+	"_id": "68175856e1aeead2aa0bac70",
+	"date": "2025-05-04",
+	"currency": "kas",
+	"__v": 0,
+	"rate": 10.59746077
+},
+{
+	"_id": "68175856e1aeead2aa0bac71",
+	"date": "2025-05-04",
+	"currency": "kava",
+	"__v": 0,
+	"rate": 2.38990653
+},
+{
+	"_id": "68175856e1aeead2aa0bac72",
+	"date": "2025-05-04",
+	"currency": "kcs",
+	"__v": 0,
+	"rate": 0.093105851
+},
+{
+	"_id": "68175856e1aeead2aa0bac73",
+	"date": "2025-05-04",
+	"currency": "kda",
+	"__v": 0,
+	"rate": 1.48444196
+},
+{
+	"_id": "68175856e1aeead2aa0bac74",
+	"date": "2025-05-04",
+	"currency": "kes",
+	"__v": 0,
+	"rate": 129.50000979
+},
+{
+	"_id": "68175856e1aeead2aa0bac75",
+	"date": "2025-05-04",
+	"currency": "kgs",
+	"__v": 0,
+	"rate": 87.47465277
+},
+{
+	"_id": "68175856e1aeead2aa0bac76",
+	"date": "2025-05-04",
+	"currency": "khr",
+	"__v": 0,
+	"rate": 3999.4282012
+},
+{
+	"_id": "68175856e1aeead2aa0bac77",
+	"date": "2025-05-04",
+	"currency": "klay",
+	"__v": 0,
+	"rate": 8.50400662
+},
+{
+	"_id": "68175856e1aeead2aa0bac78",
+	"date": "2025-05-04",
+	"currency": "kmf",
+	"__v": 0,
+	"rate": 435.30639095
+},
+{
+	"_id": "68175856e1aeead2aa0bac79",
+	"date": "2025-05-04",
+	"currency": "knc",
+	"__v": 0,
+	"rate": 2.86253753
+},
+{
+	"_id": "68175856e1aeead2aa0bac7a",
+	"date": "2025-05-04",
+	"currency": "kpw",
+	"__v": 0,
+	"rate": 899.99999983
+},
+{
+	"_id": "68175856e1aeead2aa0bac7b",
+	"date": "2025-05-04",
+	"currency": "krw",
+	"__v": 0,
+	"rate": 1400.89518594
+},
+{
+	"_id": "68175856e1aeead2aa0bac7c",
+	"date": "2025-05-04",
+	"currency": "ksm",
+	"__v": 0,
+	"rate": 0.066689539
+},
+{
+	"_id": "68175856e1aeead2aa0bac7d",
+	"date": "2025-05-04",
+	"currency": "kwd",
+	"__v": 0,
+	"rate": 0.30770052
+},
+{
+	"_id": "68175856e1aeead2aa0bac7e",
+	"date": "2025-05-04",
+	"currency": "kyd",
+	"__v": 0,
+	"rate": 0.82000364
+},
+{
+	"_id": "68175856e1aeead2aa0bac7f",
+	"date": "2025-05-04",
+	"currency": "kzt",
+	"__v": 0,
+	"rate": 516.33059894
+},
+{
+	"_id": "68175856e1aeead2aa0bac80",
+	"date": "2025-05-04",
+	"currency": "lak",
+	"__v": 0,
+	"rate": 21618.8838917
+},
+{
+	"_id": "68175856e1aeead2aa0bac81",
+	"date": "2025-05-04",
+	"currency": "lbp",
+	"__v": 0,
+	"rate": 89556.38749991
+},
+{
+	"_id": "68175856e1aeead2aa0bac82",
+	"date": "2025-05-04",
+	"currency": "ldo",
+	"__v": 0,
+	"rate": 1.20838287
+},
+{
+	"_id": "68175856e1aeead2aa0bac83",
+	"date": "2025-05-04",
+	"currency": "leo",
+	"__v": 0,
+	"rate": 0.11132511
+},
+{
+	"_id": "68175856e1aeead2aa0bac84",
+	"currency": "link",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 0.069868058
+},
+{
+	"_id": "68175856e1aeead2aa0bac85",
+	"currency": "lkr",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 299.37374838
+},
+{
+	"_id": "68175856e1aeead2aa0bac86",
+	"currency": "lrc",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 10.34362217
+},
+{
+	"_id": "68175856e1aeead2aa0bac87",
+	"currency": "lrd",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 199.15435842
+},
+{
+	"_id": "68175856e1aeead2aa0bac88",
+	"currency": "lsl",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 18.40461234
+},
+{
+	"_id": "68175856e1aeead2aa0bac89",
+	"currency": "ltc",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 0.011545129
+},
+{
+	"_id": "68175856e1aeead2aa0bac8a",
+	"currency": "ltl",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 3.05513096
+},
+{
+	"_id": "68175856e1aeead2aa0bac8b",
+	"currency": "luf",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 35.69383619
+},
+{
+	"_id": "68175856e1aeead2aa0bac8c",
+	"currency": "luna",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 6.11812475
+},
+{
+	"_id": "68175856e1aeead2aa0bac8d",
+	"currency": "lunc",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 16721.98876312
+},
+{
+	"_id": "68175856e1aeead2aa0bac8e",
+	"currency": "lvl",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 0.62185648
+},
+{
+	"_id": "68175856e1aeead2aa0bac8f",
+	"currency": "lyd",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 5.45979441
+},
+{
+	"_id": "68175856e1aeead2aa0bac90",
+	"currency": "mad",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 9.28012221
+},
+{
+	"_id": "68175856e1aeead2aa0bac91",
+	"currency": "mana",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 3.31798319
+},
+{
+	"_id": "68175856e1aeead2aa0bac92",
+	"currency": "mbx",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 5.32003639
+},
+{
+	"_id": "68175856e1aeead2aa0bac93",
+	"currency": "mdl",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 17.08064025
+},
+{
+	"_id": "68175856e1aeead2aa0bac94",
+	"currency": "mga",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 4463.8038871
+},
+{
+	"_id": "68175856e1aeead2aa0bac95",
+	"currency": "mgf",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 22319.01943548
+},
+{
+	"_id": "68175856e1aeead2aa0bac96",
+	"currency": "mina",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 4.37864751
+},
+{
+	"_id": "68175856e1aeead2aa0bac97",
+	"currency": "mkd",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 54.0027022
+},
+{
+	"_id": "68175856e1aeead2aa0bac98",
+	"currency": "mkr",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 0.00066433983
+},
+{
+	"_id": "68175856e1aeead2aa0bac99",
+	"currency": "mmk",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 2099.81179257
+},
+{
+	"_id": "68175856e1aeead2aa0bac9a",
+	"currency": "mnt",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 3572.2465159
+},
+{
+	"_id": "68175856e1aeead2aa0bac9b",
+	"currency": "mop",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 7.98301382
+},
+{
+	"_id": "68175856e1aeead2aa0bac9c",
+	"currency": "mro",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 397.78823291
+},
+{
+	"_id": "68175856e1aeead2aa0bac9d",
+	"currency": "mru",
+	"date": "2025-05-04",
+	"__v": 0,
+	"rate": 39.77882329
+},
+{
+	"_id": "68175856e1aeead2aa0bac9e",
+	"date": "2025-05-04",
+	"currency": "mtl",
+	"__v": 0,
+	"rate": 0.37985627
+},
+{
+	"_id": "68175856e1aeead2aa0bac9f",
+	"date": "2025-05-04",
+	"currency": "mur",
+	"__v": 0,
+	"rate": 45.51439442
+},
+{
+	"_id": "68175856e1aeead2aa0baca0",
+	"date": "2025-05-04",
+	"currency": "mvr",
+	"__v": 0,
+	"rate": 15.45959554
+},
+{
+	"_id": "68175856e1aeead2aa0baca1",
+	"date": "2025-05-04",
+	"currency": "mwk",
+	"__v": 0,
+	"rate": 1733.37440413
+},
+{
+	"_id": "68175856e1aeead2aa0baca2",
+	"date": "2025-05-04",
+	"currency": "mxn",
+	"__v": 0,
+	"rate": 19.57970006
+},
+{
+	"_id": "68175856e1aeead2aa0baca3",
+	"date": "2025-05-04",
+	"currency": "mxv",
+	"__v": 0,
+	"rate": 2.31819655
+},
+{
+	"_id": "68175856e1aeead2aa0baca4",
+	"date": "2025-05-04",
+	"currency": "myr",
+	"__v": 0,
+	"rate": 4.25884429
+},
+{
+	"_id": "68175856e1aeead2aa0baca5",
+	"date": "2025-05-04",
+	"currency": "mzm",
+	"__v": 0,
+	"rate": 63731.0257943
+},
+{
+	"_id": "68175856e1aeead2aa0baca6",
+	"date": "2025-05-04",
+	"currency": "mzn",
+	"__v": 0,
+	"rate": 63.73102579
+},
+{
+	"_id": "68175856e1aeead2aa0baca7",
+	"date": "2025-05-04",
+	"currency": "nad",
+	"__v": 0,
+	"rate": 18.40461234
+},
+{
+	"_id": "68175856e1aeead2aa0baca8",
+	"date": "2025-05-04",
+	"currency": "near",
+	"__v": 0,
+	"rate": 0.41025654
+},
+{
+	"_id": "68175856e1aeead2aa0baca9",
+	"date": "2025-05-04",
+	"currency": "neo",
+	"__v": 0,
+	"rate": 0.1713625
+},
+{
+	"_id": "68175856e1aeead2aa0bacaa",
+	"date": "2025-05-04",
+	"currency": "nexo",
+	"__v": 0,
+	"rate": 0.80079635
+},
+{
+	"_id": "68175856e1aeead2aa0bacab",
+	"date": "2025-05-04",
+	"currency": "nft",
+	"__v": 0,
+	"rate": 2.39354331630098E+06
+},
+{
+	"_id": "68175856e1aeead2aa0bacac",
+	"date": "2025-05-04",
+	"currency": "ngn",
+	"__v": 0,
+	"rate": 1600.11933783
+},
+{
+	"_id": "68175856e1aeead2aa0bacad",
+	"date": "2025-05-04",
+	"currency": "nio",
+	"__v": 0,
+	"rate": 36.6243572
+},
+{
+	"_id": "68175856e1aeead2aa0bacae",
+	"date": "2025-05-04",
+	"currency": "nlg",
+	"__v": 0,
+	"rate": 1.9499023
+},
+{
+	"_id": "68175856e1aeead2aa0bacaf",
+	"date": "2025-05-04",
+	"currency": "nok",
+	"__v": 0,
+	"rate": 10.41378369
+},
+{
+	"_id": "68175856e1aeead2aa0bacb0",
+	"date": "2025-05-04",
+	"currency": "npr",
+	"__v": 0,
+	"rate": 135.37438062
+},
+{
+	"_id": "68175856e1aeead2aa0bacb1",
+	"date": "2025-05-04",
+	"currency": "nzd",
+	"__v": 0,
+	"rate": 1.68107869
+},
+{
+	"_id": "68175856e1aeead2aa0bacb2",
+	"date": "2025-05-04",
+	"currency": "okb",
+	"__v": 0,
+	"rate": 0.019481007
+},
+{
+	"_id": "68175856e1aeead2aa0bacb3",
+	"date": "2025-05-04",
+	"currency": "omr",
+	"__v": 0,
+	"rate": 0.38510219
+},
+{
+	"_id": "68175856e1aeead2aa0bacb4",
+	"date": "2025-05-04",
+	"currency": "one",
+	"__v": 0,
+	"rate": 79.35593383
+},
+{
+	"_id": "68175856e1aeead2aa0bacb5",
+	"date": "2025-05-04",
+	"currency": "op",
+	"__v": 0,
+	"rate": 1.46334903
+},
+{
+	"_id": "68175856e1aeead2aa0bacb6",
+	"date": "2025-05-04",
+	"currency": "ordi",
+	"__v": 0,
+	"rate": 0.13273067
+},
+{
+	"_id": "68175856e1aeead2aa0bacb7",
+	"date": "2025-05-04",
+	"currency": "pab",
+	"__v": 0,
+	"rate": 1
+},
+{
+	"_id": "68175856e1aeead2aa0bacb8",
+	"date": "2025-05-04",
+	"currency": "paxg",
+	"__v": 0,
+	"rate": 0.00030708125
+},
+{
+	"_id": "68175856e1aeead2aa0bacb9",
+	"date": "2025-05-04",
+	"currency": "pen",
+	"__v": 0,
+	"rate": 3.65122006
+},
+{
+	"_id": "68175856e1aeead2aa0bacba",
+	"date": "2025-05-04",
+	"currency": "pepe",
+	"__v": 0,
+	"rate": 121602.46949672
+},
+{
+	"_id": "68175856e1aeead2aa0bacbb",
+	"date": "2025-05-04",
+	"currency": "pgk",
+	"__v": 0,
+	"rate": 4.08160018
+},
+{
+	"_id": "68175856e1aeead2aa0bacbc",
+	"date": "2025-05-04",
+	"currency": "php",
+	"__v": 0,
+	"rate": 55.58855393
+},
+{
+	"_id": "68175856e1aeead2aa0bacbd",
+	"date": "2025-05-04",
+	"currency": "pkr",
+	"__v": 0,
+	"rate": 281.21291646
+},
+{
+	"_id": "68175856e1aeead2aa0bacbe",
+	"date": "2025-05-04",
+	"currency": "pln",
+	"__v": 0,
+	"rate": 3.78437145
+},
+{
+	"_id": "68175856e1aeead2aa0bacbf",
+	"date": "2025-05-04",
+	"currency": "pte",
+	"__v": 0,
+	"rate": 177.39190398
+},
+{
+	"_id": "68175856e1aeead2aa0bacc0",
+	"date": "2025-05-04",
+	"currency": "pyg",
+	"__v": 0,
+	"rate": 8012.67096879
+},
+{
+	"_id": "68175856e1aeead2aa0bacc1",
+	"date": "2025-05-04",
+	"currency": "qar",
+	"__v": 0,
+	"rate": 3.64
+},
+{
+	"_id": "68175856e1aeead2aa0bacc2",
+	"date": "2025-05-04",
+	"currency": "qnt",
+	"__v": 0,
+	"rate": 0.011502161
+},
+{
+	"_id": "68175856e1aeead2aa0bacc3",
+	"date": "2025-05-04",
+	"currency": "qtum",
+	"__v": 0,
+	"rate": 0.46741897
+},
+{
+	"_id": "68175856e1aeead2aa0bacc4",
+	"date": "2025-05-04",
+	"currency": "rol",
+	"__v": 0,
+	"rate": 44060.64321313
+},
+{
+	"_id": "68175856e1aeead2aa0bacc5",
+	"date": "2025-05-04",
+	"currency": "ron",
+	"__v": 0,
+	"rate": 4.40606432
+},
+{
+	"_id": "68175856e1aeead2aa0bacc6",
+	"date": "2025-05-04",
+	"currency": "rpl",
+	"__v": 0,
+	"rate": 0.24249437
+},
+{
+	"_id": "68175856e1aeead2aa0bacc7",
+	"date": "2025-05-04",
+	"currency": "rsd",
+	"__v": 0,
+	"rate": 103.48716385
+},
+{
+	"_id": "68175856e1aeead2aa0bacc8",
+	"date": "2025-05-04",
+	"currency": "rub",
+	"__v": 0,
+	"rate": 82.74883117
+},
+{
+	"_id": "68175856e1aeead2aa0bacc9",
+	"date": "2025-05-04",
+	"currency": "rune",
+	"__v": 0,
+	"rate": 0.77561389
+},
+{
+	"_id": "68175856e1aeead2aa0bacca",
+	"date": "2025-05-04",
+	"currency": "rvn",
+	"__v": 0,
+	"rate": 88.06083496
+},
+{
+	"_id": "68175856e1aeead2aa0baccb",
+	"date": "2025-05-04",
+	"currency": "rwf",
+	"__v": 0,
+	"rate": 1412.0211764
+},
+{
+	"_id": "68175856e1aeead2aa0baccc",
+	"date": "2025-05-04",
+	"currency": "sand",
+	"__v": 0,
+	"rate": 3.53843907
+},
+{
+	"_id": "68175856e1aeead2aa0baccd",
+	"date": "2025-05-04",
+	"currency": "sar",
+	"__v": 0,
+	"rate": 3.75
+},
+{
+	"_id": "68175856e1aeead2aa0bacce",
+	"date": "2025-05-04",
+	"currency": "sbd",
+	"__v": 0,
+	"rate": 8.34029378
+},
+{
+	"_id": "68175856e1aeead2aa0baccf",
+	"date": "2025-05-04",
+	"currency": "scr",
+	"__v": 0,
+	"rate": 14.64965863
+},
+{
+	"_id": "68175856e1aeead2aa0bacd0",
+	"date": "2025-05-04",
+	"currency": "sdd",
+	"__v": 0,
+	"rate": 59887.0642312
+},
+{
+	"_id": "68175856e1aeead2aa0bacd1",
+	"date": "2025-05-04",
+	"currency": "sdg",
+	"__v": 0,
+	"rate": 598.87064231
+},
+{
+	"_id": "68175856e1aeead2aa0bacd2",
+	"date": "2025-05-04",
+	"currency": "sek",
+	"__v": 0,
+	"rate": 9.65359928
+},
+{
+	"_id": "68175856e1aeead2aa0bacd3",
+	"date": "2025-05-04",
+	"currency": "sgd",
+	"__v": 0,
+	"rate": 1.29933825
+},
+{
+	"_id": "68175856e1aeead2aa0bacd4",
+	"date": "2025-05-04",
+	"currency": "shib",
+	"__v": 0,
+	"rate": 76487.31467992
+},
+{
+	"_id": "68175856e1aeead2aa0bacd5",
+	"date": "2025-05-04",
+	"currency": "shp",
+	"__v": 0,
+	"rate": 0.75295175
+},
+{
+	"_id": "68175856e1aeead2aa0bacd6",
+	"date": "2025-05-04",
+	"currency": "sit",
+	"__v": 0,
+	"rate": 212.03996304
+},
+{
+	"_id": "68175856e1aeead2aa0bacd7",
+	"date": "2025-05-04",
+	"currency": "skk",
+	"__v": 0,
+	"rate": 26.65630081
+},
+{
+	"_id": "68175856e1aeead2aa0bacd8",
+	"date": "2025-05-04",
+	"currency": "sle",
+	"__v": 0,
+	"rate": 22.7050499
+},
+{
+	"_id": "68175856e1aeead2aa0bacd9",
+	"date": "2025-05-04",
+	"currency": "sll",
+	"__v": 0,
+	"rate": 22705.04990063
+},
+{
+	"_id": "68175856e1aeead2aa0bacda",
+	"date": "2025-05-04",
+	"currency": "snx",
+	"__v": 0,
+	"rate": 1.48560367
+},
+{
+	"_id": "68175856e1aeead2aa0bacdb",
+	"date": "2025-05-04",
+	"currency": "sol",
+	"__v": 0,
+	"rate": 0.0067904714
+},
+{
+	"_id": "68175856e1aeead2aa0bacdc",
+	"date": "2025-05-04",
+	"currency": "sos",
+	"__v": 0,
+	"rate": 572.19415785
+},
+{
+	"_id": "68175856e1aeead2aa0bacdd",
+	"date": "2025-05-04",
+	"currency": "spl",
+	"__v": 0,
+	"rate": 0.16666667
+},
+{
+	"_id": "68175856e1aeead2aa0bacde",
+	"date": "2025-05-04",
+	"currency": "srd",
+	"__v": 0,
+	"rate": 36.73073102
+},
+{
+	"_id": "68175856e1aeead2aa0bacdf",
+	"date": "2025-05-04",
+	"currency": "srg",
+	"__v": 0,
+	"rate": 36730.73102384
+},
+{
+	"_id": "68175856e1aeead2aa0bace0",
+	"date": "2025-05-04",
+	"currency": "std",
+	"__v": 0,
+	"rate": 21651.9216373
+},
+{
+	"_id": "68175856e1aeead2aa0bace1",
+	"date": "2025-05-04",
+	"currency": "stn",
+	"__v": 0,
+	"rate": 21.65192164
+},
+{
+	"_id": "68175856e1aeead2aa0bace2",
+	"date": "2025-05-04",
+	"currency": "stx",
+	"__v": 0,
+	"rate": 1.27903514
+},
+{
+	"_id": "68175856e1aeead2aa0bace3",
+	"date": "2025-05-04",
+	"currency": "sui",
+	"__v": 0,
+	"rate": 0.30480719
+},
+{
+	"_id": "68175856e1aeead2aa0bace4",
+	"date": "2025-05-04",
+	"currency": "svc",
+	"__v": 0,
+	"rate": 8.75
+},
+{
+	"_id": "68175856e1aeead2aa0bace5",
+	"date": "2025-05-04",
+	"currency": "syp",
+	"__v": 0,
+	"rate": 13001.92367568
+},
+{
+	"_id": "68175856e1aeead2aa0bace6",
+	"date": "2025-05-04",
+	"currency": "szl",
+	"__v": 0,
+	"rate": 18.40461234
+},
+{
+	"_id": "68175856e1aeead2aa0bace7",
+	"date": "2025-05-04",
+	"currency": "thb",
+	"__v": 0,
+	"rate": 33.22566964
+},
+{
+	"_id": "68175856e1aeead2aa0bace8",
+	"date": "2025-05-04",
+	"currency": "theta",
+	"__v": 0,
+	"rate": 1.40314838
+},
+{
+	"_id": "68175856e1aeead2aa0bace9",
+	"date": "2025-05-04",
+	"currency": "tjs",
+	"__v": 0,
+	"rate": 10.36858709
+},
+{
+	"_id": "68175856e1aeead2aa0bacea",
+	"date": "2025-05-04",
+	"currency": "tmm",
+	"__v": 0,
+	"rate": 17484.1380015
+},
+{
+	"_id": "68175856e1aeead2aa0baceb",
+	"date": "2025-05-04",
+	"currency": "tmt",
+	"__v": 0,
+	"rate": 3.4968276
+},
+{
+	"_id": "68175856e1aeead2aa0bacec",
+	"date": "2025-05-04",
+	"currency": "tnd",
+	"__v": 0,
+	"rate": 2.96102056
+},
+{
+	"_id": "68175856e1aeead2aa0baced",
+	"date": "2025-05-04",
+	"currency": "ton",
+	"__v": 0,
+	"rate": 0.32376097
+},
+{
+	"_id": "68175856e1aeead2aa0bacee",
+	"date": "2025-05-04",
+	"currency": "top",
+	"__v": 0,
+	"rate": 2.37079677
+},
+{
+	"_id": "68175856e1aeead2aa0bacef",
+	"date": "2025-05-04",
+	"currency": "trl",
+	"__v": 0,
+	"rate": 3.85380976933516E+07
+},
+{
+	"_id": "68175856e1aeead2aa0bacf0",
+	"date": "2025-05-04",
+	"currency": "trx",
+	"__v": 0,
+	"rate": 4.05447936
+},
+{
+	"_id": "68175856e1aeead2aa0bacf1",
+	"date": "2025-05-04",
+	"currency": "try",
+	"__v": 0,
+	"rate": 38.53809769
+},
+{
+	"_id": "68175856e1aeead2aa0bacf2",
+	"date": "2025-05-04",
+	"currency": "ttd",
+	"__v": 0,
+	"rate": 6.75127064
+},
+{
+	"_id": "68175856e1aeead2aa0bacf3",
+	"date": "2025-05-04",
+	"currency": "tusd",
+	"__v": 0,
+	"rate": 1.00135984
+},
+{
+	"_id": "68175856e1aeead2aa0bacf4",
+	"date": "2025-05-04",
+	"currency": "tvd",
+	"__v": 0,
+	"rate": 1.55156755
+},
+{
+	"_id": "68175856e1aeead2aa0bacf5",
+	"date": "2025-05-04",
+	"currency": "twd",
+	"__v": 0,
+	"rate": 30.74477581
+},
+{
+	"_id": "68175856e1aeead2aa0bacf6",
+	"date": "2025-05-04",
+	"currency": "twt",
+	"__v": 0,
+	"rate": 1.2472388
+},
+{
+	"_id": "68175856e1aeead2aa0bacf7",
+	"date": "2025-05-04",
+	"currency": "tzs",
+	"__v": 0,
+	"rate": 2676.21816189
+},
+{
+	"_id": "68175856e1aeead2aa0bacf8",
+	"date": "2025-05-04",
+	"currency": "uah",
+	"__v": 0,
+	"rate": 41.66580627
+},
+{
+	"_id": "68175856e1aeead2aa0bacf9",
+	"date": "2025-05-04",
+	"currency": "ugx",
+	"__v": 0,
+	"rate": 3663.68466847
+},
+{
+	"_id": "68175856e1aeead2aa0bacfa",
+	"date": "2025-05-04",
+	"currency": "uni",
+	"__v": 0,
+	"rate": 0.19566514
+},
+{
+	"_id": "68175856e1aeead2aa0bacfb",
+	"date": "2025-05-04",
+	"currency": "usd",
+	"__v": 0,
+	"rate": 1
+},
+{
+	"_id": "68175856e1aeead2aa0bacfc",
+	"date": "2025-05-04",
+	"currency": "usdc",
+	"__v": 0,
+	"rate": 1.00008804
+},
+{
+	"_id": "68175856e1aeead2aa0bacfd",
+	"date": "2025-05-04",
+	"currency": "usdd",
+	"__v": 0,
+	"rate": 1.00023711
+},
+{
+	"_id": "68175856e1aeead2aa0bacfe",
+	"date": "2025-05-04",
+	"currency": "usdp",
+	"__v": 0,
+	"rate": 1.00050458
+},
+{
+	"_id": "68175856e1aeead2aa0bacff",
+	"date": "2025-05-04",
+	"currency": "usdt",
+	"__v": 0,
+	"rate": 0.9998636
+},
+{
+	"_id": "68175856e1aeead2aa0bad00",
+	"date": "2025-05-04",
+	"currency": "uyu",
+	"__v": 0,
+	"rate": 41.96781264
+},
+{
+	"_id": "68175856e1aeead2aa0bad01",
+	"date": "2025-05-04",
+	"currency": "uzs",
+	"__v": 0,
+	"rate": 12901.66975858
+},
+{
+	"_id": "68175856e1aeead2aa0bad02",
+	"date": "2025-05-04",
+	"currency": "val",
+	"__v": 0,
+	"rate": 1713.26414303
+},
+{
+	"_id": "68175856e1aeead2aa0bad03",
+	"date": "2025-05-04",
+	"currency": "veb",
+	"__v": 0,
+	"rate": 8.735976208220798E+09
+},
+{
+	"_id": "68175856e1aeead2aa0bad04",
+	"date": "2025-05-04",
+	"currency": "ved",
+	"__v": 0,
+	"rate": 87.35976208
+},
+{
+	"_id": "68175856e1aeead2aa0bad05",
+	"date": "2025-05-04",
+	"currency": "vef",
+	"__v": 0,
+	"rate": 8.7359762082208E+06
+},
+{
+	"_id": "68175856e1aeead2aa0bad06",
+	"date": "2025-05-04",
+	"currency": "ves",
+	"__v": 0,
+	"rate": 87.35976208
+},
+{
+	"_id": "68175856e1aeead2aa0bad07",
+	"date": "2025-05-04",
+	"currency": "vet",
+	"__v": 0,
+	"rate": 38.35826129
+},
+{
+	"_id": "68175856e1aeead2aa0bad08",
+	"date": "2025-05-04",
+	"currency": "vnd",
+	"__v": 0,
+	"rate": 25984.89442531
+},
+{
+	"_id": "68175856e1aeead2aa0bad09",
+	"date": "2025-05-04",
+	"currency": "vuv",
+	"__v": 0,
+	"rate": 121.09281925
+},
+{
+	"_id": "68175856e1aeead2aa0bad0a",
+	"date": "2025-05-04",
+	"currency": "waves",
+	"__v": 0,
+	"rate": 0.89530267
+},
+{
+	"_id": "68175856e1aeead2aa0bad0b",
+	"date": "2025-05-04",
+	"currency": "wemix",
+	"__v": 0,
+	"rate": 2.7397946
+},
+{
+	"_id": "68175856e1aeead2aa0bad0c",
+	"date": "2025-05-04",
+	"currency": "woo",
+	"__v": 0,
+	"rate": 13.77035865
+},
+{
+	"_id": "68175856e1aeead2aa0bad0d",
+	"date": "2025-05-04",
+	"currency": "wst",
+	"__v": 0,
+	"rate": 2.77851986
+},
+{
+	"_id": "68175856e1aeead2aa0bad0e",
+	"date": "2025-05-04",
+	"currency": "xaf",
+	"__v": 0,
+	"rate": 580.40852126
+},
+{
+	"_id": "68175856e1aeead2aa0bad0f",
+	"date": "2025-05-04",
+	"currency": "xag",
+	"__v": 0,
+	"rate": 0.031203519
+},
+{
+	"_id": "68175856e1aeead2aa0bad10",
+	"date": "2025-05-04",
+	"currency": "xau",
+	"__v": 0,
+	"rate": 0.0003086129
+},
+{
+	"_id": "68175856e1aeead2aa0bad11",
+	"date": "2025-05-04",
+	"currency": "xaut",
+	"__v": 0,
+	"rate": 0.00030732294
+},
+{
+	"_id": "68175856e1aeead2aa0bad12",
+	"date": "2025-05-04",
+	"currency": "xbt",
+	"__v": 0,
+	"rate": 1.03943E-05
+},
+{
+	"_id": "68175856e1aeead2aa0bad13",
+	"date": "2025-05-04",
+	"currency": "xcd",
+	"__v": 0,
+	"rate": 2.70000294
+},
+{
+	"_id": "68175856e1aeead2aa0bad14",
+	"date": "2025-05-04",
+	"currency": "xcg",
+	"__v": 0,
+	"rate": 1.79000067
+},
+{
+	"_id": "68175856e1aeead2aa0bad15",
+	"date": "2025-05-04",
+	"currency": "xch",
+	"__v": 0,
+	"rate": 0.089150879
+},
+{
+	"_id": "68175856e1aeead2aa0bad16",
+	"date": "2025-05-04",
+	"currency": "xdc",
+	"__v": 0,
+	"rate": 13.54399325
+},
+{
+	"_id": "68175856e1aeead2aa0bad17",
+	"date": "2025-05-04",
+	"currency": "xdr",
+	"__v": 0,
+	"rate": 0.73853062
+},
+{
+	"_id": "68175856e1aeead2aa0bad18",
+	"date": "2025-05-04",
+	"currency": "xec",
+	"__v": 0,
+	"rate": 46510.99062988
+},
+{
+	"_id": "68175856e1aeead2aa0bad19",
+	"date": "2025-05-04",
+	"currency": "xem",
+	"__v": 0,
+	"rate": 53.65630946
+},
+{
+	"_id": "68175856e1aeead2aa0bad1a",
+	"date": "2025-05-04",
+	"currency": "xlm",
+	"__v": 0,
+	"rate": 3.66694486
+},
+{
+	"_id": "68175856e1aeead2aa0bad1b",
+	"date": "2025-05-04",
+	"currency": "xmr",
+	"__v": 0,
+	"rate": 0.0036382651
+},
+{
+	"_id": "68175856e1aeead2aa0bad1c",
+	"date": "2025-05-04",
+	"currency": "xof",
+	"__v": 0,
+	"rate": 580.40852126
+},
+{
+	"_id": "68175856e1aeead2aa0bad1d",
+	"date": "2025-05-04",
+	"currency": "xpd",
+	"__v": 0,
+	"rate": 0.0010465801
+},
+{
+	"_id": "68175856e1aeead2aa0bad1e",
+	"date": "2025-05-04",
+	"currency": "xpf",
+	"__v": 0,
+	"rate": 105.58795783
+},
+{
+	"_id": "68175856e1aeead2aa0bad1f",
+	"date": "2025-05-04",
+	"currency": "xpt",
+	"__v": 0,
+	"rate": 0.0010362963
+},
+{
+	"_id": "68175856e1aeead2aa0bad20",
+	"date": "2025-05-04",
+	"currency": "xrp",
+	"__v": 0,
+	"rate": 0.45112984
+},
+{
+	"_id": "68175856e1aeead2aa0bad21",
+	"date": "2025-05-04",
+	"currency": "xtz",
+	"__v": 0,
+	"rate": 1.79858681
+},
+{
+	"_id": "68175856e1aeead2aa0bad22",
+	"date": "2025-05-04",
+	"currency": "yer",
+	"__v": 0,
+	"rate": 244.60262279
+},
+{
+	"_id": "68175856e1aeead2aa0bad23",
+	"date": "2025-05-04",
+	"currency": "zar",
+	"__v": 0,
+	"rate": 18.40461234
+},
+{
+	"_id": "68175856e1aeead2aa0bad24",
+	"date": "2025-05-04",
+	"currency": "zec",
+	"__v": 0,
+	"rate": 0.027555603
+},
+{
+	"_id": "68175856e1aeead2aa0bad25",
+	"date": "2025-05-04",
+	"currency": "zil",
+	"__v": 0,
+	"rate": 80.71442078
+},
+{
+	"_id": "68175856e1aeead2aa0bad26",
+	"date": "2025-05-04",
+	"currency": "zmk",
+	"__v": 0,
+	"rate": 27847.40855859
+},
+{
+	"_id": "68175856e1aeead2aa0bad27",
+	"date": "2025-05-04",
+	"currency": "zmw",
+	"__v": 0,
+	"rate": 27.84740856
+},
+{
+	"_id": "68175856e1aeead2aa0bad28",
+	"date": "2025-05-04",
+	"currency": "zwd",
+	"__v": 0,
+	"rate": 361.9
+},
+{
+	"_id": "68175856e1aeead2aa0bad29",
+	"date": "2025-05-04",
+	"currency": "zwg",
+	"__v": 0,
+	"rate": 26.83781396
+},
+{
+	"_id": "68175856e1aeead2aa0bad2a",
+	"date": "2025-05-04",
+	"currency": "zwl",
+	"__v": 0,
+	"rate": 67060.29522883
+}]
+
