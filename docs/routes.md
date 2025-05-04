@@ -18,7 +18,7 @@ Query Parameters:
 Examples:
 ```
 /sneakers?limit=10                         # Show only 10 sneakers
-/sneakers?release_date_after=2022-05-01    # Show sneakers released after May 5th, 2022
+/sneakers?release_date_after=2022-05-01    # Show sneakers released after May 1st, 2022
 ```
 
 **GET**	/sneakers/{id} : Get a specific sneaker information
