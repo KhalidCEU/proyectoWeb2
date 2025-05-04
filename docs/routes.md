@@ -7,16 +7,18 @@
 **GET**	/sneakers : List all sneakers
 
 Query Parameters:
-- `stock`: Filter by stock level
-    - `low`: Less than 50 items
-    - `high`: 50 items or more
-- `release_date_after`: Filter by release date (Format: YYYY-MM-DD)
-- `limit`: Maximum number of results to return (default: 20, max: 100)
+- `release_date_after`: Filter by release date (e.g., 2024-05-01)
+    - Type: string (date)
+- `limit`: Maximum number of items to return
+    - Type: integer
+    - Minimum: 1
+    - Maximum: 100
+    - Default: 20
 
 Examples:
 ```
-/sneakers?stock=low                      # Show sneakers with low stock
-/sneakers?release_date_after=2024-05-01  # Show upcoming releases
+/sneakers?limit=10                         # Show only 10 sneakers
+/sneakers?release_date_after=2022-05-01    # Show sneakers released after May 5th, 2022
 ```
 
 **GET**	/sneakers/{id} : Get a specific sneaker information
