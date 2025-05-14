@@ -1,0 +1,23 @@
+[
+    {
+      "id": "store001",
+      "adress": "123 Main Street, New York, NY"
+    },
+    {
+      "id": "store002",
+      "adress": "456 Sunset Blvd, Los Angeles, CA"
+    },
+    {
+      "id": "store003",
+      "adress": "789 Ocean Drive, Miami, FL"
+    },
+    {
+      "id": "store004",
+      "adress": "321 High Street, Boston, MA"
+    },
+    {
+      "id": "store005",
+      "adress": "654 King Street, Seattle, WA"
+    }
+  ]
+  
