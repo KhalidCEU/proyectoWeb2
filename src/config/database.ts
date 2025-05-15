@@ -27,7 +27,8 @@ export async function seedDatabase() {
     try {
         await Promise.all([
             seedSneakers(),
-            seedCurrencies()
+            seedCurrencies(),
+            seedStores()
         ]);
     } catch (error) {
         console.error("Seeding failed:", error);
@@ -57,4 +58,16 @@ async function seedCurrencies() {
 
     await Currency.insertMany(currencySeedData);
     console.log(`Seeded ${currencySeedData.length} documents in 'currencies'`);
+}
+
+async function seedStores() {
+    const storesCount = await Store.countDocuments();
+
+    if (storesCount > 0) {
+        console.log(`Found ${storesCount} documents in 'stores' - skipping seed`);
+        return;
+    }
+
+    await Store.insertMany(storeSeedData);
+    console.log(`Seeded ${storeSeedData.length} documents in 'stores'`);
 }
