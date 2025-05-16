@@ -46,7 +46,6 @@ export const getStoreById = async (req, res) => {
             status: 'failure'
         });
     }
-
 };
 
 export const createStore = async (req, res) => {
@@ -56,7 +55,7 @@ export const createStore = async (req, res) => {
 
         const address = storeData.address;
 
-        if (address.length < 10 || address.length > 100) {
+        if (!address || address.length < 10 || address.length > 100) {
             return res
                 .status(400)
                 .json({
@@ -86,13 +85,13 @@ export const updateStoreById = async (req, res) => {
         const { storeId } = req.params;
         const updateData = req.body;
 
-        if (updateData.address) {
-            if (updateData.address.length < 10 || updateData.address.length > 100) {
-                return res.status(400).json({
-                    message: 'Invalid input data',
-                    status: 'failure'
-                });
-            }
+        const address = updateData.address;
+
+        if (!address || address.length < 10 || address.length > 100) {
+            return res.status(400).json({
+                message: 'Invalid input data',
+                status: 'failure'
+            });
         }
 
         const updatedStore = await Store.findOneAndUpdate(
