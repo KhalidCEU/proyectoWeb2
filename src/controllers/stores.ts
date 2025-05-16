@@ -1,40 +1,146 @@
 import { Store } from "../schemas/store";
 
 export const getStores = async (req, res) => {
-    const stores = await Store.find();
-    if (!stores.length) {
-        return res.status(404).json({ message: "No stores found", status: "failure" });
+    try {
+        const stores = await Store.find();
+
+        if (!stores.length) {
+            return res.status(404).json({ message: "No stores found", status: "failure" });
+        }
+
+        return res.status(200).json({
+            items: stores, count: stores.length, status: "success"
+        });
+
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Error fetching stores',
+            status: 'failure'
+        });
     }
-    res.status(200).json({ items: stores, count: stores.length, status: "success" });
 };
 
 export const getStoreById = async (req, res) => {
-    const { id } = req.params;
-    const store = await Store.findOne({ id });
-    if (!store) return res.status(404).json({ message: "Store not found", status: "failure" });
-    res.status(200).json({ items: store, status: "success" });
+    try {
+        const { storeId } = req.params;
+
+        const store = await Store.findOne({ _id: storeId });
+
+        if (!store) {
+            return res
+                .status(404)
+                .json({
+                    message: 'Store not found',
+                    status: 'failure'
+            })
+        }
+
+        return res.status(200).json({
+                items: store,
+                status: "success"
+        });
+
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Error fetching stores',
+            status: 'failure'
+        });
+    }
+
 };
 
 export const createStore = async (req, res) => {
     try {
-        const newStore = new Store(req.body);
-        await newStore.save();
-        res.status(201).json({ items: newStore, status: "success" });
+        const storeData = req.body;
+        const store = await Store.insertOne(storeData);
+
+        const address = storeData.address;
+
+        if (address.length < 10 || address.length > 100) {
+            return res
+                .status(400)
+                .json({
+                    message: 'Invalid input data',
+                    status: 'failure'
+                });
+        }
+
+        return res
+            .status(201)
+            .json({
+                items: store,
+                message: 'Store created successfully',
+                status: 'success'
+            });
+
     } catch (error) {
-        res.status(400).json({ message: "Invalid input", status: "failure" });
+        return res.status(500).json({
+            message: 'Error creating store',
+            status: 'failure'
+        });
     }
 };
 
 export const updateStoreById = async (req, res) => {
-    const { id } = req.params;
-    const store = await Store.findOneAndUpdate({ id }, req.body, { new: true });
-    if (!store) return res.status(404).json({ message: "Store not found", status: "failure" });
-    res.status(200).json({ items: store, status: "success" });
+    try {
+        const { storeId } = req.params;
+        const updateData = req.body;
+
+        if (updateData.address) {
+            if (updateData.address.length < 10 || updateData.address.length > 100) {
+                return res.status(400).json({
+                    message: 'Invalid input data',
+                    status: 'failure'
+                });
+            }
+        }
+
+        const updatedStore = await Store.findOneAndUpdate(
+            { _id: storeId },
+            updateData,
+            { new: true }
+        );
+
+        if (!updatedStore) {
+            return res.status(404).json({
+                message: "Store not found",
+                status: "failure"
+            });
+        }
+
+        return res.status(200).json({
+            items: updatedStore,
+            message: "Store successfully updated",
+            status: "success"
+        });
+
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Error updating store',
+            status: 'failure'
+        });
+    }
 };
 
 export const deleteStoreById = async (req, res) => {
-    const { id } = req.params;
-    const store = await Store.findOneAndDelete({ id });
-    if (!store) return res.status(404).json({ message: "Store not found", status: "failure" });
-    res.status(200).json({ message: "Store deleted", status: "success" });
+    try {
+        const { storeId } = req.params;
+
+        const store = await Store.findOneAndDelete({ _id: storeId });
+
+        if (!store) {
+            return res.status(404).json({
+                message: "Store not found",
+                status: "failure"
+            });
+        }
+
+        return res.status(204);
+
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Error deleting store',
+            status: 'failure'
+        });
+    }
 };
