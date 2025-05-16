@@ -92,4 +92,3 @@ sneakers?currency=eur&limit=2&release_date_after=2021-10-22
 **PUT**	/stores/{id} :  Update a specific store information
 
 **DELETE**	/stores/{id} :  Delete a specific store
-

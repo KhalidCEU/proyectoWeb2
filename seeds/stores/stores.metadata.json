@@ -1,0 +1,13 @@
+{
+    "indexes": [
+      {
+        "v": { "$numberInt": "2" },
+        "key": { "_id": { "$numberInt": "1" } },
+        "name": "_id_"
+      }
+    ],
+    "uuid": "a1b2c3d4e5f64789abcdef0123456789",
+    "collectionName": "stores",
+    "type": "collection"
+  }
+  
