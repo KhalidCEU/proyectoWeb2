@@ -78,6 +78,15 @@ export const getSneakerById = async (req, res) => {
 
     const sneaker = await Sneaker.findOne({ _id: sneakerId });
 
+    if (!sneaker) {
+        return res
+            .status(404)
+            .json({
+                message: 'Sneaker not found',
+                status: 'failure'
+            });
+    }
+
     return res
         .status(200)
         .json({
