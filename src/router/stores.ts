@@ -10,9 +10,9 @@ import {
 const storesRouter = express.Router();
 
 storesRouter.get('/', getStores);
-storesRouter.get('/:id', getStoreById);
+storesRouter.get('/:storeId', getStoreById);
 storesRouter.post('/', createStore);
-storesRouter.put('/:id', updateStoreById);
-storesRouter.delete('/:id', deleteStoreById);
+storesRouter.put('/:storeId', updateStoreById);
+storesRouter.delete('/:storeId', deleteStoreById);
 
 export default storesRouter;
