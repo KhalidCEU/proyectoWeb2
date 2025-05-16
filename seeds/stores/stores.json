@@ -1,0 +1,20 @@
+[{
+    "_id": "6827a32bef76e28e88878fd2",
+    "address": "123 Main Street, New York, NY"
+},
+{
+    "_id": "6827a32bef76e28e88878fd3",
+    "address": "456 Sunset Blvd, Los Angeles, CA"
+},
+{
+    "_id": "6827a32bef76e28e88878fd4",
+    "address": "789 Ocean Drive, Miami, FL"
+},
+{
+    "_id": "6827a32bef76e28e88878fd5",
+    "address": "321 High Street, Boston, MA"
+},
+{
+    "_id": "6827a32bef76e28e88878fd6",
+    "address": "654 King Street, Seattle, WA"
+}]

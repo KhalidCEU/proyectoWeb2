@@ -703,7 +703,7 @@ paths:
               $ref: '#/components/schemas/Store'
       responses:
         '200':
-          description: Store updated
+          description: Store successfully updated
           content:
             application/json:
               schema:
@@ -785,7 +785,7 @@ components:
     Review:
       type: object
       properties:
-        id:
+        _id:
           type: string
           readOnly: true
         rating:
@@ -801,7 +801,7 @@ components:
     User:
       type: object
       properties:
-        id:
+        _id:
           type: string
           readOnly: true
         name:
@@ -814,7 +814,7 @@ components:
     Provider:
       type: object
       properties:
-        id:
+        _id:
           type: string
           readOnly: true
         name:
@@ -827,10 +827,13 @@ components:
     Store:
       type: object
       properties:
-        id:
+        _id:
           type: string
+          readOnly: true
         adress:
           type: string
+          minLength: 10
+          maxLength: 100
 
     # Status code schemas
 
