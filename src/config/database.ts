@@ -5,6 +5,7 @@ import { Sneaker } from "../schemas/sneaker";
 import { Currency } from "../schemas/currency";
 import { Store } from "../schemas/store";
 
+
 import sneakerSeedData from "../../seeds/sneakers/sneakers.json";
 import currencySeedData from "../../seeds/currencies.json";
 import storeSeedData from "../../seeds/stores/stores.json";
