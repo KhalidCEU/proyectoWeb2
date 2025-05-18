@@ -11,25 +11,19 @@ import {
 
 const usersRouter = express.Router();
 
-// POST /users
-usersRouter.post('/', createUser);
-
-// GET /users/:id
+// GET
 usersRouter.get('/:id', getUserById);
-
-// PUT /users/:id
-usersRouter.put('/:id', updateUser);
-
-// DELETE /users/:id
-usersRouter.delete('/:id', deleteUser);
-
-// GET /users/:id/favorites
 usersRouter.get('/:id/favorites', getFavorites);
 
-// POST /users/:id/favorites
+// POST
+usersRouter.post('/', createUser);
 usersRouter.post('/:id/favorites', addFavorite);
 
-// DELETE /users/:id/favorites/:sneakerId
+// PUT
+usersRouter.put('/:id', updateUser);
+
+// DELETE
+usersRouter.delete('/:id', deleteUser);
 usersRouter.delete('/:id/favorites/:sneakerId', removeFavorite);
 
 export default usersRouter;
