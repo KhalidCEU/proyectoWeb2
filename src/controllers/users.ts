@@ -199,10 +199,18 @@ export const removeFavorite = async (req, res) => {
             });
         }
 
-        user.favorites = user.favorites.filter(
-            (fav) => fav.toString() !== sneakerId
+        const index = user.favorites.findIndex(
+            (fav) => fav.toString() === sneakerId
         );
 
+        if (index === -1) {
+            return res.status(404).json({
+              message: "Sneaker not found in favorites",
+              status: "failure"
+            });
+        }
+
+        user.favorites.splice(index, 1);
         await user.save();
 
         return res.status(204).send();
