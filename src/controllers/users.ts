@@ -71,7 +71,7 @@ export const updateUser = async (req, res) => {
         const { id } = req.params;
         const updateData = req.body;
 
-        if (!updateData.name && !updateData.email) {
+        if (!updateData.name || !updateData.email) {
             return res.status(400).json({
                 message: 'Invalid input data',
                 status: 'failure'
