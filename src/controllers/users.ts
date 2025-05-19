@@ -17,6 +17,7 @@ export const getUserById = async (req, res) => {
 
         return res.status(200).json({
             items: user,
+            message: 'User data fetched succesfully.',
             status: 'success'
         });
 
@@ -49,8 +50,7 @@ export const createUser = async (req, res) => {
             });
         }
 
-        const newUser = await User.create({ name, email });
-        await newUser.save();
+        const newUser = await User.insertOne({ name, email });
 
         return res.status(201).json({
             items: newUser,
