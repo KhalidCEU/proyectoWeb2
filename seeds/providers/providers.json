@@ -1,0 +1,402 @@
+[
+    {
+      "name": "Nike",
+      "contact_email": "support@nike.com"
+    },
+    {
+      "name": "Adidas",
+      "contact_email": "support@adidas.com"
+    },
+    {
+      "name": "Puma",
+      "contact_email": "support@puma.com"
+    },
+    {
+      "name": "Reebok",
+      "contact_email": "support@reebok.com"
+    },
+    {
+      "name": "New Balance",
+      "contact_email": "support@newbalance.com"
+    },
+    {
+      "name": "Under Armour",
+      "contact_email": "support@underarmour.com"
+    },
+    {
+      "name": "Asics",
+      "contact_email": "support@asics.com"
+    },
+    {
+      "name": "Converse",
+      "contact_email": "support@converse.com"
+    },
+    {
+      "name": "Vans",
+      "contact_email": "support@vans.com"
+    },
+    {
+      "name": "Fila",
+      "contact_email": "support@fila.com"
+    },
+    {
+      "name": "Brooks",
+      "contact_email": "support@brooks.com"
+    },
+    {
+      "name": "Saucony",
+      "contact_email": "support@saucony.com"
+    },
+    {
+      "name": "Skechers",
+      "contact_email": "support@skechers.com"
+    },
+    {
+      "name": "Mizuno",
+      "contact_email": "support@mizuno.com"
+    },
+    {
+      "name": "Jordan",
+      "contact_email": "support@jordan.com"
+    },
+    {
+      "name": "New Era",
+      "contact_email": "support@newera.com"
+    },
+    {
+      "name": "DC Shoes",
+      "contact_email": "support@dcshoes.com"
+    },
+    {
+      "name": "Burton",
+      "contact_email": "support@burton.com"
+    },
+    {
+      "name": "The North Face",
+      "contact_email": "support@thenorthface.com"
+    },
+    {
+      "name": "Columbia",
+      "contact_email": "support@columbia.com"
+    },
+    {
+      "name": "Salomon",
+      "contact_email": "support@salomon.com"
+    },
+    {
+      "name": "Merrell",
+      "contact_email": "support@merrell.com"
+    },
+    {
+      "name": "Patagonia",
+      "contact_email": "support@patagonia.com"
+    },
+    {
+      "name": "Arc'teryx",
+      "contact_email": "support@arcteryx.com"
+    },
+    {
+      "name": "Hoka One One",
+      "contact_email": "support@hokaoneone.com"
+    },
+    {
+      "name": "Altra",
+      "contact_email": "support@altra.com"
+    },
+    {
+      "name": "On Running",
+      "contact_email": "support@onrunning.com"
+    },
+    {
+      "name": "Vibram",
+      "contact_email": "support@vibram.com"
+    },
+    {
+      "name": "K-Swiss",
+      "contact_email": "support@k-swiss.com"
+    },
+    {
+      "name": "Lululemon",
+      "contact_email": "support@lululemon.com"
+    },
+    {
+      "name": "Karhu",
+      "contact_email": "support@karhu.com"
+    },
+    {
+      "name": "Diadora",
+      "contact_email": "support@diadora.com"
+    },
+    {
+      "name": "Ecco",
+      "contact_email": "support@ecco.com"
+    },
+    {
+      "name": "Gola",
+      "contact_email": "support@gola.com"
+    },
+    {
+      "name": "KangaROOS",
+      "contact_email": "support@kangaroos.com"
+    },
+    {
+      "name": "Le Coq Sportif",
+      "contact_email": "support@lecoqsportif.com"
+    },
+    {
+      "name": "Veja",
+      "contact_email": "support@veja.com"
+    },
+    {
+      "name": "Allbirds",
+      "contact_email": "support@allbirds.com"
+    },
+    {
+      "name": "Koio",
+      "contact_email": "support@koio.com"
+    },
+    {
+      "name": "Cariuma",
+      "contact_email": "support@cariuma.com"
+    },
+    {
+      "name": "Novesta",
+      "contact_email": "support@novesta.com"
+    },
+    {
+      "name": "Danner",
+      "contact_email": "support@danner.com"
+    },
+    {
+      "name": "Clarks",
+      "contact_email": "support@clarks.com"
+    },
+    {
+      "name": "TOMS",
+      "contact_email": "support@toms.com"
+    },
+    {
+      "name": "Supra",
+      "contact_email": "support@supra.com"
+    },
+    {
+      "name": "Golden Goose",
+      "contact_email": "support@goldengoose.com"
+    },
+    {
+      "name": "Common Projects",
+      "contact_email": "support@commonprojects.com"
+    },
+    {
+      "name": "BAPE",
+      "contact_email": "support@bape.com"
+    },
+    {
+      "name": "Yeezy",
+      "contact_email": "support@yeezy.com"
+    },
+    {
+      "name": "Li-Ning",
+      "contact_email": "support@li-ning.com"
+    },
+    {
+      "name": "Peak",
+      "contact_email": "support@peak.com"
+    },
+    {
+      "name": "Anta",
+      "contact_email": "support@anta.com"
+    },
+    {
+      "name": "361 Degrees",
+      "contact_email": "support@361degrees.com"
+    },
+    {
+      "name": "Air Jordan",
+      "contact_email": "support@airjordan.com"
+    },
+    {
+      "name": "Y-3",
+      "contact_email": "support@y-3.com"
+    },
+    {
+      "name": "Off-White",
+      "contact_email": "support@off-white.com"
+    },
+    {
+      "name": "Balenciaga",
+      "contact_email": "support@balenciaga.com"
+    },
+    {
+      "name": "Gucci",
+      "contact_email": "support@gucci.com"
+    },
+    {
+      "name": "Dior",
+      "contact_email": "support@dior.com"
+    },
+    {
+      "name": "Dolce & Gabbana",
+      "contact_email": "support@dolcegabbana.com"
+    },
+    {
+      "name": "Moschino",
+      "contact_email": "support@moschino.com"
+    },
+    {
+      "name": "Alexander McQueen",
+      "contact_email": "support@alexandermcqueen.com"
+    },
+    {
+      "name": "Prada",
+      "contact_email": "support@prada.com"
+    },
+    {
+      "name": "Versace",
+      "contact_email": "support@versace.com"
+    },
+    {
+      "name": "Saint Laurent",
+      "contact_email": "support@saintlaurent.com"
+    },
+    {
+      "name": "Givenchy",
+      "contact_email": "support@givenchy.com"
+    },
+    {
+      "name": "Fendi",
+      "contact_email": "support@fendi.com"
+    },
+    {
+      "name": "Valentino",
+      "contact_email": "support@valentino.com"
+    },
+    {
+      "name": "Chanel",
+      "contact_email": "support@chanel.com"
+    },
+    {
+      "name": "Balmain",
+      "contact_email": "support@balmain.com"
+    },
+    {
+      "name": "Undercover",
+      "contact_email": "support@undercover.com"
+    },
+    {
+      "name": "Maison Margiela",
+      "contact_email": "support@maisonmargiela.com"
+    },
+    {
+      "name": "Rick Owens",
+      "contact_email": "support@rickowens.com"
+    },
+    {
+      "name": "Veja x Rick Owens",
+      "contact_email": "support@vejaxrickowens.com"
+    },
+    {
+      "name": "Nike SB",
+      "contact_email": "support@nikesb.com"
+    },
+    {
+      "name": "Adidas Originals",
+      "contact_email": "support@adidasoriginals.com"
+    },
+    {
+      "name": "Puma Select",
+      "contact_email": "support@pumaselect.com"
+    },
+    {
+      "name": "New Balance Numeric",
+      "contact_email": "support@newbalancenumeric.com"
+    },
+    {
+      "name": "Saucony Originals",
+      "contact_email": "support@sauconyoriginals.com"
+    },
+    {
+      "name": "Converse Chuck",
+      "contact_email": "support@conversechuck.com"
+    },
+    {
+      "name": "Vans Vault",
+      "contact_email": "support@vansvault.com"
+    },
+    {
+      "name": "Reebok Classics",
+      "contact_email": "support@reebokclassics.com"
+    },
+    {
+      "name": "Asics Tiger",
+      "contact_email": "support@asicstiger.com"
+    },
+    {
+      "name": "Onitsuka Tiger",
+      "contact_email": "support@onitsukatiger.com"
+    },
+    {
+      "name": "Under Armour HOVR",
+      "contact_email": "support@underarmourhovr.com"
+    },
+    {
+      "name": "Skechers Sport",
+      "contact_email": "support@skecherssport.com"
+    },
+    {
+      "name": "Merrell Moab",
+      "contact_email": "support@merrellmoab.com"
+    },
+    {
+      "name": "Salomon Speedcross",
+      "contact_email": "support@salomonspeedcross.com"
+    },
+    {
+      "name": "Patagonia Footwear",
+      "contact_email": "support@patagoniafootwear.com"
+    },
+    {
+      "name": "Arc'teryx Veilance",
+      "contact_email": "support@arcteryxveilance.com"
+    },
+    {
+      "name": "Hoka EVO",
+      "contact_email": "support@hokaevo.com"
+    },
+    {
+      "name": "Altra Escalante",
+      "contact_email": "support@altraescalante.com"
+    },
+    {
+      "name": "On Cloud",
+      "contact_email": "support@oncloud.com"
+    },
+    {
+      "name": "Vibram FiveFingers",
+      "contact_email": "support@vibramfivefingers.com"
+    },
+    {
+      "name": "K-Swiss Classic",
+      "contact_email": "support@k-swissclassic.com"
+    },
+    {
+      "name": "Lululemon Surge",
+      "contact_email": "support@lululemonsurge.com"
+    },
+    {
+      "name": "Karhu Fusion",
+      "contact_email": "support@karhufusion.com"
+    },
+    {
+      "name": "Diadora Heritage",
+      "contact_email": "support@diadoraheritage.com"
+    },
+    {
+      "name": "Ecco Biom",
+      "contact_email": "support@eccobiom.com"
+    },
+    {
+      "name": "Gola Classics",
+      "contact_email": "support@golaclassics.com"
+    }
+  ]
