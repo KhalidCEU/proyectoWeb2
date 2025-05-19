@@ -40,7 +40,16 @@ export const createUser = async (req, res) => {
             });
         }
 
-        const newUser = new User({ name, email });
+        const existingUser = await User.findOne({ email });
+
+        if (existingUser) {
+            return res.status(409).json({
+                message: 'Email already exists',
+                status: 'failure'
+            });
+        }
+
+        const newUser = await User.create({ name, email });
         await newUser.save();
 
         return res.status(201).json({
