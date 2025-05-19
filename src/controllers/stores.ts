@@ -9,7 +9,7 @@ export const getStores = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: stores, count: stores.length, status: "success"
+            items: stores, count: stores.length, message: 'Stores data fetched successfully', status: "success"
         });
 
     } catch (error) {
@@ -95,8 +95,8 @@ export const updateStoreById = async (req, res) => {
             }
         }
 
-        const updatedStore = await Store.findOneAndUpdate(
-            { _id: storeId },
+        const updatedStore = await Store.findByIdAndUpdate(
+            storeId,
             updateData,
             { new: true }
         );
@@ -126,16 +126,20 @@ export const deleteStoreById = async (req, res) => {
     try {
         const { storeId } = req.params;
 
-        const store = await Store.findOneAndDelete({ _id: storeId });
+        const deleted = await Store.findByIdAndDelete(storeId);
 
-        if (!store) {
+        if (!deleted) {
             return res.status(404).json({
                 message: "Store not found",
                 status: "failure"
             });
         }
 
-        return res.status(204);
+        return res.status(200).json({
+            items: deleted,
+            message: 'Store deleted successfully',
+            status: 'success'
+        });
 
     } catch (error) {
         return res.status(500).json({
