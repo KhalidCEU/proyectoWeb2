@@ -318,7 +318,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/User'
+              $ref: '#/components/schemas/UserInput'
       responses:
         '201':
           description: User created
@@ -331,6 +331,12 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '409':
+          description: Email already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 
   /users/{id}:
     get:
@@ -349,7 +355,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/UserResponse'
         '404':
           description: User not found
           content:
@@ -371,14 +377,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/User'
+              $ref: '#/components/schemas/UserInput'
       responses:
         '200':
           description: User updated
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/UserResponse'
         '400':
           description: Invalid input data
           content:
@@ -460,9 +466,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/FavoritesResponse'
         '404':
           description: User or sneaker not found
           content:
@@ -798,6 +802,16 @@ components:
           type: string
       required: [rating]
 
+    UserInput:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+      required: [name, email]
+
     User:
       type: object
       properties:
@@ -809,7 +823,37 @@ components:
         email:
           type: string
           format: email
+        favorites:
+          type: array
+          items:
+            type: string
       required: [name, email]
+
+    UserResponse:
+      type: object
+      properties:
+        items:
+          $ref: '#/components/schemas/User'
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
+
+    FavoritesResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: string
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
 
     Provider:
       type: object
@@ -840,6 +884,9 @@ components:
     Error:
       type: object
       properties:
-        code: { type: string }
-        message: { type: string }
-      required: [error]
+        message:
+          type: string
+        status:
+          type: string
+          enum: [failure]
+      required: [message, status]
