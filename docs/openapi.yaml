@@ -250,7 +250,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Review'
+                $ref: '#/components/schemas/ReviewsResponse'
         '404':
           description: Review not found
           content:
@@ -279,12 +279,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Review'
-        '403':
-          description: Not authorized to update this review
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/Error' }
+                $ref: '#/components/schemas/ReviewsResponse'
         '404':
           description: Review not found
           content:
@@ -304,11 +299,6 @@ paths:
       responses:
         '204':
           description: Review deleted
-        '403':
-          description: Not authorized to delete this review
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/Error' }
         '404':
           description: Review not found
           content:
