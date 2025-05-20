@@ -94,6 +94,13 @@ export const updateProviderById = async (req, res) => {
             });
         }
 
+        if (!updateData.name || !updateData.contact_email) {
+            return res.status(400).json({
+                message: 'Invalid input data',
+                status: 'failure'
+            });
+        }
+
         return res.status(200).json({
             items: provider,
             message: 'Provider updated successfully',
