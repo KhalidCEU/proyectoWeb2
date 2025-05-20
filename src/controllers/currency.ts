@@ -31,7 +31,7 @@ export const fetchAndSaveCurrencies = async () => {
     }
 }
 
-const minutes = 1 * 60 * 1000; // 1 min
+const minutes = 1 * 60 * 3000; // 3 min
 
 export const startCurrencyScheduler = () => {
     fetchAndSaveCurrencies();
