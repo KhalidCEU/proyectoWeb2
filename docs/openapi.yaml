@@ -319,7 +319,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UserInput'
+              $ref: '#/components/schemas/User'
       responses:
         '201':
           description: User created
@@ -512,9 +512,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/Provider'
         '404':
           description: No providers found
           content:
@@ -537,7 +535,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/ProvidersResponse'
         '400':
           description: Invalid input data
           content:
@@ -561,7 +559,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/ProvidersResponse'
         '404':
           description: Provider not found
           content:
@@ -590,7 +588,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/ProvidersResponse'
         '400':
           description: Invalid input data
           content:
@@ -887,6 +885,18 @@ components:
           type: string
           format: email
       required: [name, contact_email]
+
+    ProvidersResponse:
+      type: object
+      properties:
+        items:
+          $ref: '#/components/schemas/Provider'
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
 
     Store:
       type: object
