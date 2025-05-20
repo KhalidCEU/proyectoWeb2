@@ -75,26 +75,36 @@ export const getSneakers = async (req, res) => {
 
 
 export const getSneakerById = async (req, res) => {
-    const { sneakerId } = req.params;
+    try {
+        const { sneakerId } = req.params;
 
-    const sneaker = await Sneaker.findOne({ _id: sneakerId });
+        const sneaker = await Sneaker.findOne({ _id: sneakerId });
 
-    if (!sneaker) {
+        if (!sneaker) {
+            return res
+                .status(404)
+                .json({
+                    message: 'Sneaker not found',
+                    status: 'failure'
+                });
+        }
+
         return res
-            .status(404)
+            .status(200)
             .json({
-                message: 'Sneaker not found',
+                items: sneaker,
+                message: 'Sneaker data fetched succesfully.',
+                status: 'success'
+            })
+
+    } catch (error) {
+        return res
+            .status(500)
+            .json({
+                message: 'Error getting sneaker',
                 status: 'failure'
             });
     }
-
-    return res
-        .status(200)
-        .json({
-            items: sneaker,
-            message: 'Sneaker data fetched succesfully.',
-            status: 'success'
-        })
 };
 
 export const createSneaker = async (req, res) => {
