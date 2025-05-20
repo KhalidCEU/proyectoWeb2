@@ -42,7 +42,7 @@ export const getStoreById = async (req, res) => {
 
     } catch (error) {
         return res.status(500).json({
-            message: 'Error fetching stores',
+            message: 'Error getting store',
             status: 'failure'
         });
     }
