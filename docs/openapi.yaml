@@ -1,11 +1,12 @@
-openapi: 3.0.0
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+openapi: 3.0.3
 info:
   title: Snapi (Sneakers API)
   version: 1.0.0
   description: API for managing sneakers, reviews, users, providers and stores
 servers:
-  - url: http://localhost:8080/api
-    description: V1
+  - url: http://localhost:8080/api/
+    description: Production server
 
 tags:
   - name: sneakers
@@ -216,7 +217,17 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Review'
+                $ref: '#/components/schemas/ReviewsResponse'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '409':
+          description: User has already reviewed this sneaker
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
         '404':
           description: Sneaker not found
           content:
@@ -240,7 +251,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Review'
+                $ref: '#/components/schemas/ReviewsResponse'
         '404':
           description: Review not found
           content:
@@ -269,12 +280,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Review'
-        '403':
-          description: Not authorized to update this review
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/Error' }
+                $ref: '#/components/schemas/ReviewsResponse'
         '404':
           description: Review not found
           content:
@@ -294,11 +300,6 @@ paths:
       responses:
         '204':
           description: Review deleted
-        '403':
-          description: Not authorized to delete this review
-          content:
-            application/json:
-              schema: { $ref: '#/components/schemas/Error' }
         '404':
           description: Review not found
           content:
@@ -331,6 +332,12 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '409':
+          description: Email already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 
   /users/{id}:
     get:
@@ -349,7 +356,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/UserResponse'
         '404':
           description: User not found
           content:
@@ -371,14 +378,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/User'
+              $ref: '#/components/schemas/UserInput'
       responses:
         '200':
           description: User updated
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/UserResponse'
         '400':
           description: Invalid input data
           content:
@@ -460,9 +467,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/FavoritesResponse'
         '404':
           description: User or sneaker not found
           content:
@@ -507,9 +512,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/Provider'
         '404':
           description: No providers found
           content:
@@ -532,7 +535,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/ProvidersResponse'
         '400':
           description: Invalid input data
           content:
@@ -556,7 +559,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/ProvidersResponse'
         '404':
           description: Provider not found
           content:
@@ -585,7 +588,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Provider'
+                $ref: '#/components/schemas/ProvidersResponse'
         '400':
           description: Invalid input data
           content:
@@ -788,15 +791,31 @@ components:
         _id:
           type: string
           readOnly: true
+        sneakerId:
+          type: string
+          readOnly: true # The saved sneakerId is the one in the param
+        userId:
+          type: string
         rating:
           type: integer
           minimum: 1
           maximum: 5
         comment:
           type: string
-        userId:
+        date:
           type: string
-      required: [rating]
+          format: date-time
+      required: [sneakerId, rating, userId]
+
+    UserInput:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+      required: [name, email]
 
     User:
       type: object
@@ -809,7 +828,50 @@ components:
         email:
           type: string
           format: email
+        favorites:
+          type: array
+          items:
+            type: string
       required: [name, email]
+
+    UserResponse:
+      type: object
+      properties:
+        items:
+          $ref: '#/components/schemas/User'
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
+
+    FavoritesResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: string
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
+
+    ReviewsResponse:
+      type: object
+      properties:
+        items:
+            $ref: '#/components/schemas/Review'
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
+
 
     Provider:
       type: object
@@ -823,6 +885,18 @@ components:
           type: string
           format: email
       required: [name, contact_email]
+
+    ProvidersResponse:
+      type: object
+      properties:
+        items:
+          $ref: '#/components/schemas/Provider'
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
 
     Store:
       type: object
@@ -840,6 +914,9 @@ components:
     Error:
       type: object
       properties:
-        code: { type: string }
-        message: { type: string }
-      required: [error]
+        message:
+          type: string
+        status:
+          type: string
+          enum: [failure]
+      required: [message, status]
