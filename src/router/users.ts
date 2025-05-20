@@ -3,7 +3,7 @@ import {
     createUser,
     getUserById,
     updateUser,
-    deleteUser,
+    deleteUserById,
     getFavorites,
     addFavorite,
     removeFavorite
@@ -23,7 +23,7 @@ usersRouter.post('/:id/favorites', addFavorite);
 usersRouter.put('/:id', updateUser);
 
 // DELETE
-usersRouter.delete('/:id', deleteUser);
+usersRouter.delete('/:id', deleteUserById);
 usersRouter.delete('/:id/favorites/:sneakerId', removeFavorite);
 
 export default usersRouter;
