@@ -4,11 +4,12 @@ import dotenv from 'dotenv';
 import { Sneaker } from "../schemas/sneaker";
 import { Currency } from "../schemas/currency";
 import { Store } from "../schemas/store";
-
+import { Provider } from "../schemas/provider";
 
 import sneakerSeedData from "../../seeds/sneakers/sneakers.json";
 import currencySeedData from "../../seeds/currencies.json";
 import storeSeedData from "../../seeds/stores/stores.json";
+import providerSeedData from "../../seeds/providers/providers.json";
 
 dotenv.config({ path: '../../.env' });
 
@@ -29,7 +30,8 @@ export async function seedDatabase() {
         await Promise.all([
             seedSneakers(),
             seedCurrencies(),
-            seedStores()
+            seedStores(),
+            seedProviders()
         ]);
     } catch (error) {
         console.error("Seeding failed:", error);
@@ -71,4 +73,16 @@ async function seedStores() {
 
     await Store.insertMany(storeSeedData);
     console.log(`Seeded ${storeSeedData.length} documents in 'stores'`);
+}
+
+async function seedProviders() {
+    const providersCount = await Provider.countDocuments();
+
+    if (providersCount > 0) {
+        console.log(`Found ${providersCount} documents in 'providers' - skipping seed`);
+        return;
+    }
+
+    await Provider.insertMany(providerSeedData);
+    console.log(`Seeded ${providerSeedData.length} documents in 'providers'`);
 }
