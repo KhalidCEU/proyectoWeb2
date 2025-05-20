@@ -1,3 +1,4 @@
+import { Review } from "../schemas/review";
 import { Sneaker } from "../schemas/sneaker";
 import { getCurrencyRate } from "./utils/currency";
 
@@ -74,26 +75,36 @@ export const getSneakers = async (req, res) => {
 
 
 export const getSneakerById = async (req, res) => {
-    const { sneakerId } = req.params;
+    try {
+        const { sneakerId } = req.params;
 
-    const sneaker = await Sneaker.findOne({ _id: sneakerId });
+        const sneaker = await Sneaker.findOne({ _id: sneakerId });
 
-    if (!sneaker) {
+        if (!sneaker) {
+            return res
+                .status(404)
+                .json({
+                    message: 'Sneaker not found',
+                    status: 'failure'
+                });
+        }
+
         return res
-            .status(404)
+            .status(200)
             .json({
-                message: 'Sneaker not found',
+                items: sneaker,
+                message: 'Sneaker data fetched succesfully.',
+                status: 'success'
+            })
+
+    } catch (error) {
+        return res
+            .status(500)
+            .json({
+                message: 'Error getting sneaker',
                 status: 'failure'
             });
     }
-
-    return res
-        .status(200)
-        .json({
-            items: sneaker,
-            message: 'Sneaker data fetched succesfully.',
-            status: 'success'
-        })
 };
 
 export const createSneaker = async (req, res) => {
@@ -189,3 +200,97 @@ export const deleteSneakerById = async (req, res) => {
             });
     }
 };
+
+
+export const getSneakerReviews = async (req, res) => {
+    const { sneakerId } = req.params;
+
+    try {
+
+        const existingSneaker = await Sneaker.findOne({ _id: sneakerId });
+
+        if (!existingSneaker) {
+            return res.status(404).json({
+                message: 'Sneaker not found',
+                status: 'failure'
+            });
+        }
+
+        const reviews = await Review.find({ sneakerId }).sort({ date: -1 });
+
+        if (!reviews || reviews.length === 0) {
+            return res.status(404).json({
+                message: 'No reviews available for this sneaker',
+                status: 'failure'
+            });
+        }
+
+        return res.status(200).json(reviews);
+
+    } catch (error) {
+
+        return res.status(500).json({
+            message: 'Error fetching reviews',
+            status: 'failure'
+        });
+    }
+};
+
+
+
+export const createSneakerReview = async (req, res) => {
+    const { sneakerId } = req.params;
+    const { rating, comment, userId } = req.body;
+
+    try {
+        const existingSneaker = await Sneaker.findOne({ _id: sneakerId });
+
+        if (!existingSneaker) {
+            return res.status(404).json({
+                    message: 'Sneaker not found',
+                    status: 'failure'
+            });
+        }
+
+        if (!rating || rating < 1 || rating > 5) {
+            return res.status(400).json({
+                message: 'Rating must be between 1 and 5',
+                status: 'failure'
+            });
+        }
+
+        const existingReview = await Review.findOne({ sneakerId, userId });
+
+        if (existingReview) {
+            return res.status(409).json({
+                message: 'You have already reviewed this sneaker',
+                status: 'failure'
+            });
+        }
+
+        const newReview = new Review({
+            sneakerId,
+            rating,
+            userId,
+            comment,
+            date: new Date()
+        })
+
+        await newReview.save();
+
+
+        return res.status(201).json({
+            items: newReview,
+            message: 'Review created successfully',
+            status: 'success'
+        });
+
+    } catch (error) {
+
+        return res.status(500).json({
+            message: 'Error creating review',
+            status: 'failure'
+        });
+    }
+}
+

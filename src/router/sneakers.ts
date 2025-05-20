@@ -4,7 +4,9 @@ import {
     getSneakerById,
     createSneaker,
     updateSneakerById,
-    deleteSneakerById
+    deleteSneakerById,
+    getSneakerReviews,
+    createSneakerReview
 } from '../controllers/sneakers';
 
 const sneakersRouter = express.Router();
@@ -13,8 +15,11 @@ const sneakersRouter = express.Router();
 sneakersRouter.get('/', getSneakers);
 sneakersRouter.get('/:sneakerId', getSneakerById);
 
+sneakersRouter.get('/:sneakerId/reviews', getSneakerReviews);
+
 // POST
 sneakersRouter.post('/', createSneaker);
+sneakersRouter.post('/:sneakerId/reviews', createSneakerReview);
 
 // PUT
 sneakersRouter.put('/:sneakerId', updateSneakerById);

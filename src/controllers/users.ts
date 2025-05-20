@@ -23,7 +23,7 @@ export const getUserById = async (req, res) => {
 
     } catch (error) {
         return res.status(500).json({
-            message: 'Error fetching user',
+            message: 'Error getting user',
             status: 'failure'
         });
     }
@@ -102,7 +102,7 @@ export const updateUser = async (req, res) => {
 };
 
 
-export const deleteUser = async (req, res) => {
+export const deleteUserById = async (req, res) => {
     try {
         const { id } = req.params;
 
