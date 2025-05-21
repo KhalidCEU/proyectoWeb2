@@ -43,7 +43,15 @@ paths:
             type: integer
             minimum: 1
             maximum: 100
+            default: 20
           description: Maximum number of items to return (default 20)
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          description: Number of items to skip before starting to collect the result set (default 0)
         - name: currency
           in: query
           schema:
@@ -753,6 +761,16 @@ components:
             $ref: '#/components/schemas/Sneaker'
         count:
           type: integer
+          description: Number of sneakers returned in this response
+        total:
+          type: integer
+          description: Total number of sneakers matching the query (for all pages)
+        offset:
+          type: integer
+          description: Offset used in the query
+        limit:
+          type: integer
+          description: Limit used in the query
         message:
           type: string
         status:
@@ -775,6 +793,8 @@ components:
           type: string
         modelKey:
           type: string
+        size:
+          type: number
         retail_price:
           type: number
           format: float
