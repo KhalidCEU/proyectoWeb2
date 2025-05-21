@@ -133,7 +133,7 @@ export const deleteStoreById = async (req, res) => {
             });
         }
 
-        return res.status(204);
+        return res.status(204).send();
 
     } catch (error) {
         return res.status(500).json({
