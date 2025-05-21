@@ -1,5 +1,4 @@
 import { Review } from "../schemas/review";
-import { removeVersionKey } from "./utils/utils";
 
 export const getReviewById = async (req, res) => {
     try {
