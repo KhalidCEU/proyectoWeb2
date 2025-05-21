@@ -75,6 +75,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     post:
       tags:
@@ -98,6 +100,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /sneakers/{id}:
     get:
@@ -122,6 +126,9 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
     put:
       tags:
         - sneakers
@@ -155,6 +162,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     delete:
       tags:
@@ -174,7 +183,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
-
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   # REVIEWS
 
@@ -203,6 +213,9 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
     post:
       tags:
         - reviews
@@ -241,6 +254,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /reviews/{reviewId}:
     get:
@@ -265,6 +280,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     put:
       tags:
@@ -294,6 +311,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     delete:
       tags:
@@ -313,7 +332,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
-
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   # USERS
 
@@ -346,6 +366,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /users/{id}:
     get:
@@ -370,6 +392,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     put:
       tags:
@@ -404,6 +428,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     delete:
       tags:
@@ -423,6 +449,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /users/{id}/favorites:
     get:
@@ -449,6 +477,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     post:
       tags:
@@ -481,6 +511,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /users/{id}/favorites/{sneakerId}:
     delete:
@@ -506,6 +538,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   # PROVIDERS
 
@@ -526,6 +560,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     post:
       tags:
@@ -549,6 +585,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /providers/{id}:
     get:
@@ -573,6 +611,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     put:
       tags:
@@ -607,6 +647,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     delete:
       tags:
@@ -626,6 +668,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   # STORES
 
@@ -648,6 +692,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     post:
       tags:
@@ -671,6 +717,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /stores/{id}:
     get:
@@ -695,6 +743,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     put:
       tags:
@@ -729,6 +779,8 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     delete:
       tags:
@@ -748,8 +800,13 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
+## COMPONENTS
 components:
+
+  # Schemas
   schemas:
 
     SneakersResponse:
@@ -940,3 +997,14 @@ components:
           type: string
           enum: [failure]
       required: [message, status]
+
+
+  # Responses
+  responses:
+
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
