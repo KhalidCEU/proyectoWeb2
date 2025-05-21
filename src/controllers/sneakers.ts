@@ -96,7 +96,9 @@ export const getSneakerById = async (req, res) => {
     try {
         const { sneakerId } = req.params;
 
-        const sneaker = await Sneaker.findOne({ _id: sneakerId });
+        const sneaker = await Sneaker
+            .findOne({ _id: sneakerId })
+            .select('-__v');
 
         if (!sneaker) {
             return res
@@ -156,7 +158,7 @@ export const updateSneakerById = async (req, res) => {
         const sneaker = await Sneaker.findByIdAndUpdate(
             sneakerId,
             updateData,
-            { new: true }
+            { new: true, select: '-__v' }
         );
 
         if (!sneaker) {

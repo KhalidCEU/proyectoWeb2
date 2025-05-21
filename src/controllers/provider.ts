@@ -2,7 +2,7 @@ import { Provider } from "../schemas/provider";
 
 export const getProviders = async (req, res) => {
     try {
-        const providers = await Provider.find();
+        const providers = await Provider.find().select('-__v');
 
         if (!providers || providers.length === 0) {
             return res.status(404).json({
@@ -30,7 +30,9 @@ export const getProviderById = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const provider = await Provider.findById(id);
+        const provider = await Provider
+            .findById(id)
+            .select('-__v');
 
         if (!provider) {
             return res.status(404).json({
@@ -85,7 +87,11 @@ export const updateProviderById = async (req, res) => {
     const updateData = req.body;
 
     try {
-        const provider = await Provider.findByIdAndUpdate(id, updateData, { new: true });
+        const provider = await Provider.findByIdAndUpdate(
+            id,
+            updateData,
+            { new: true, select: '-__v'}
+        );
 
         if (!provider) {
             return res.status(404).json({

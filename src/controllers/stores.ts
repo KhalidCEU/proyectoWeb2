@@ -97,7 +97,7 @@ export const updateStoreById = async (req, res) => {
         const updatedStore = await Store.findOneAndUpdate(
             { _id: storeId },
             updateData,
-            { new: true }
+            { new: true, select: '-__v' }
         );
 
         if (!updatedStore) {
@@ -134,7 +134,7 @@ export const deleteStoreById = async (req, res) => {
             });
         }
 
-        return res.status(204);
+        return res.status(204).send();
 
     } catch (error) {
         return res.status(500).json({
