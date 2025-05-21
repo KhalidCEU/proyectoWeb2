@@ -50,35 +50,34 @@ export const getStoreById = async (req, res) => {
 
 export const createStore = async (req, res) => {
     try {
-        const storeData = req.body;
-        const store = await Store.insertOne(storeData);
-
-        const address = storeData.address;
+        const { address } = req.body;
 
         if (!address || address.length < 10 || address.length > 100) {
-            return res
-                .status(400)
-                .json({
-                    message: 'Invalid input data',
-                    status: 'failure'
-                });
+            return res.status(400).json({
+                message: 'Invalid input data',
+                status: 'failure'
+            });
         }
 
-        return res
-            .status(201)
-            .json({
-                items: store,
-                message: 'Store created successfully',
-                status: 'success'
-            });
+        const store = new Store({ address });
+        await store.save();
+
+        return res.status(201).json({
+            items: store,
+            message: 'Store created successfully',
+            status: 'success'
+        });
 
     } catch (error) {
+        console.error("Store creation error:", error);
         return res.status(500).json({
             message: 'Error creating store',
             status: 'failure'
         });
     }
 };
+
+
 
 export const updateStoreById = async (req, res) => {
     try {
