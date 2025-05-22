@@ -1,6 +1,10 @@
+import { parse } from "js2xmlparser";
+
 import { Review } from "../schemas/review";
 import { Sneaker } from "../schemas/sneaker";
 import { getCurrencyRate } from "./utils/currency";
+
+import { cleanReviewForXml } from "./utils/xml";
 
 export const getSneakers = async (req, res) => {
     try {
@@ -219,39 +223,63 @@ export const deleteSneakerById = async (req, res) => {
 
 export const getSneakerReviews = async (req, res) => {
     const { sneakerId } = req.params;
+    const { format } = req.query;
 
     try {
-
         const existingSneaker = await Sneaker.findOne({ _id: sneakerId });
 
         if (!existingSneaker) {
-            return res.status(404).json({
+            const errorObj = {
                 message: 'Sneaker not found',
                 status: 'failure'
-            });
+            };
+
+            if (format === 'xml') {
+                res.set('Content-Type', 'application/xml');
+                return res.status(404).send(parse("error", errorObj));
+            }
+
+            return res.status(404).json(errorObj);
         }
 
-        const reviews = await Review.find({ sneakerId }).select('-__v').sort({ date: -1 });
+        const reviews = await Review.find({ sneakerId }).sort({ date: -1 });
 
         if (!reviews || reviews.length === 0) {
-            return res.status(404).json({
+            const errorObj = {
                 message: 'No reviews available for this sneaker',
                 status: 'failure'
-            });
+            };
+
+            if (format === 'xml') {
+                res.set('Content-Type', 'application/xml');
+                return res.status(404).send(parse("error", errorObj));
+            }
+
+            return res.status(404).json(errorObj);
         }
 
-        return res.status(200).json({
-            items: reviews,
-            message: 'Reviews data fetched successfully',
-            status: 'success'
-        });
+        if (format === 'xml') {
+            res.set('Content-Type', 'application/xml');
+            const cleanedReviews = reviews.map(r => cleanReviewForXml(r.toObject()));
+
+            return res.status(200)
+                .send(parse("reviews", { review: cleanedReviews }));
+        }
+
+        return res.status(200).json(reviews);
 
     } catch (error) {
-
-        return res.status(500).json({
+        const errorObj = {
             message: 'Error fetching reviews',
             status: 'failure'
-        });
+        };
+
+        if (req.query.format === 'xml') {
+            res.set('Content-Type', 'application/xml');
+            return res.status(500).send(parse("error", errorObj));
+        }
+
+        return res.status(500).json(errorObj);
     }
 };
 
