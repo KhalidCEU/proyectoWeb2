@@ -49,6 +49,21 @@ sneakers?currency=eur&limit=2&release_date_after=2021-10-22
 
 **GET** /sneakers/{sneakerId}/reviews : Get all reviews for a specific sneaker
 
+Query Parameters:
+- `format`: Response format (optional, defaults to JSON)
+    - Type: string
+    Allowed values: **JSON, XML**
+
+Examples:
+
+```
+# Get all reviews for sneaker with ID 682b89e24d2ea61f1a8ab86f (JSON format)
+/sneakers/682b89e24d2ea61f1a8ab86f/reviews
+
+# Get all reviews for sneaker with ID 682b89e24d2ea61f1a8ab86f (XML format)
+/sneakers/682b89e24d2ea61f1a8ab86f/reviews?format=xml
+```
+
 **POST** /sneakers/{sneakerId}/reviews : Create review for a sneaker
 
 **GET**	/reviews/{reviewId} : Get a specific review

@@ -199,6 +199,13 @@ paths:
           required: true
           schema:
             type: string
+        - name: format
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [json, xml]
+          description: Set to 'xml' to receive the response in XML format. Defaults to JSON.
       responses:
         '200':
           description: Successful response
