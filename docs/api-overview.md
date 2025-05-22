@@ -6,6 +6,8 @@
     <img src="assets/api-diagram.png" alt="API Diagram" width="50%">
 </div>
 
+> Diagram made with [eraser.io](https://eraser.io)
+
 Our API architecture consists of three main components:
 
 1. **Node.js Server**: Handles REST endpoints and processes requests:
