@@ -2,7 +2,7 @@ import { Provider } from "../schemas/provider";
 
 export const getProviders = async (req, res) => {
     try {
-        const providers = await Provider.find();
+        const providers = await Provider.find().select('-__v');
 
         if (!providers || providers.length === 0) {
             return res.status(404).json({
@@ -13,7 +13,6 @@ export const getProviders = async (req, res) => {
 
         return res.status(200).json({
             items: providers,
-            count: providers.length,
             message: 'Providers data fetched successfully',
             status: 'success'
         });
@@ -30,7 +29,9 @@ export const getProviderById = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const provider = await Provider.findById(id);
+        const provider = await Provider
+            .findById(id)
+            .select('-__v');
 
         if (!provider) {
             return res.status(404).json({
@@ -40,7 +41,7 @@ export const getProviderById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: provider,
+            items: [provider],
             message: 'Provider data fetched successfully',
             status: 'success'
         });
@@ -67,7 +68,7 @@ export const createProvider = async (req, res) => {
         const provider = await Provider.insertOne(providerData);
 
         return res.status(201).json({
-            items: provider,
+            items: [provider],
             message: 'Provider created successfully',
             status: 'success'
         });
@@ -85,7 +86,11 @@ export const updateProviderById = async (req, res) => {
     const updateData = req.body;
 
     try {
-        const provider = await Provider.findByIdAndUpdate(id, updateData, { new: true });
+        const provider = await Provider.findByIdAndUpdate(
+            id,
+            updateData,
+            { new: true, select: '-__v'}
+        );
 
         if (!provider) {
             return res.status(404).json({
@@ -102,7 +107,7 @@ export const updateProviderById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: provider,
+            items: [provider],
             message: 'Provider updated successfully',
             status: 'success'
         });

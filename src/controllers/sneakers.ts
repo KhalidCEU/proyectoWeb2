@@ -4,7 +4,7 @@ import { getCurrencyRate } from "./utils/currency";
 
 export const getSneakers = async (req, res) => {
     try {
-        const { release_date_after, limit = 20, currency } = req.query;
+        const { release_date_after, limit = 20, offset = 0, currency } = req.query;
 
         let query = {};
 
@@ -22,9 +22,19 @@ export const getSneakers = async (req, res) => {
         }
 
         // Limit validation
-        if (limit && (limit < 1 || limit > 100)) {
+        const parsedLimit = Number(limit);
+        if (parsedLimit < 1 || parsedLimit > 100) {
             return res.status(400).json({
                 message: 'Limit must be between 1 and 100',
+                status: 'failure'
+            });
+        }
+
+        // Offset validation
+        const parsedOffset = Number(offset);
+        if (parsedOffset < 0) {
+            return res.status(400).json({
+                message: 'Offset must be 0 or greater',
                 status: 'failure'
             });
         }
@@ -43,7 +53,12 @@ export const getSneakers = async (req, res) => {
             }
         }
 
-        const sneakers = await Sneaker.find(query).limit(Number(limit));
+        const total = await Sneaker.countDocuments(query);
+
+        const sneakers = await Sneaker.find(query)
+            .skip(parsedOffset)
+            .limit(parsedLimit)
+            .select('-__v');
 
         if (!sneakers || sneakers.length === 0) {
             return res.status(404).json({
@@ -61,6 +76,9 @@ export const getSneakers = async (req, res) => {
         return res.status(200).json({
             items: convertedSneakers,
             count: convertedSneakers.length,
+            total,
+            offset: parsedOffset,
+            limit: parsedLimit,
             message: 'Sneakers data fetched successfully',
             status: 'success'
         });
@@ -73,12 +91,13 @@ export const getSneakers = async (req, res) => {
     }
 };
 
-
 export const getSneakerById = async (req, res) => {
     try {
         const { sneakerId } = req.params;
 
-        const sneaker = await Sneaker.findOne({ _id: sneakerId });
+        const sneaker = await Sneaker
+            .findOne({ _id: sneakerId })
+            .select('-__v');
 
         if (!sneaker) {
             return res
@@ -92,7 +111,7 @@ export const getSneakerById = async (req, res) => {
         return res
             .status(200)
             .json({
-                items: sneaker,
+                items: [sneaker],
                 message: 'Sneaker data fetched succesfully.',
                 status: 'success'
             })
@@ -110,12 +129,15 @@ export const getSneakerById = async (req, res) => {
 export const createSneaker = async (req, res) => {
     try {
         const sneakerData = req.body;
-        const sneaker = await Sneaker.insertOne(sneakerData);
+        const sneaker = await Sneaker.create(sneakerData);
+
+        const sneakerWithoutV = sneaker.toObject();
+        delete sneakerWithoutV.__v;
 
         return res
             .status(201)
             .json({
-                items: sneaker,
+                items: [sneakerWithoutV],
                 message: 'Sneaker created successfully',
                 status: 'success'
             });
@@ -138,7 +160,7 @@ export const updateSneakerById = async (req, res) => {
         const sneaker = await Sneaker.findByIdAndUpdate(
             sneakerId,
             updateData,
-            { new: true }
+            { new: true, select: '-__v' }
         );
 
         if (!sneaker) {
@@ -153,7 +175,7 @@ export const updateSneakerById = async (req, res) => {
         return res
             .status(200)
             .json({
-                items: sneaker,
+                items: [sneaker],
                 message: 'Sneaker updated successfully',
                 status: 'success'
             });
@@ -183,13 +205,7 @@ export const deleteSneakerById = async (req, res) => {
                 });
         }
 
-        return res
-            .status(200)
-            .json({
-                items: sneaker,
-                message: 'Sneaker deleted successfully',
-                status: 'success'
-            });
+        return res.status(204).send();
 
     } catch (error) {
         return res
@@ -200,7 +216,6 @@ export const deleteSneakerById = async (req, res) => {
             });
     }
 };
-
 
 export const getSneakerReviews = async (req, res) => {
     const { sneakerId } = req.params;
@@ -216,7 +231,7 @@ export const getSneakerReviews = async (req, res) => {
             });
         }
 
-        const reviews = await Review.find({ sneakerId }).sort({ date: -1 });
+        const reviews = await Review.find({ sneakerId }).select('-__v').sort({ date: -1 });
 
         if (!reviews || reviews.length === 0) {
             return res.status(404).json({
@@ -225,7 +240,11 @@ export const getSneakerReviews = async (req, res) => {
             });
         }
 
-        return res.status(200).json(reviews);
+        return res.status(200).json({
+            items: reviews,
+            message: 'Reviews data fetched successfully',
+            status: 'success'
+        });
 
     } catch (error) {
 
@@ -235,8 +254,6 @@ export const getSneakerReviews = async (req, res) => {
         });
     }
 };
-
-
 
 export const createSneakerReview = async (req, res) => {
     const { sneakerId } = req.params;
@@ -274,13 +291,15 @@ export const createSneakerReview = async (req, res) => {
             userId,
             comment,
             date: new Date()
-        })
+        });
 
         await newReview.save();
 
+        const reviewWithoutV = newReview.toObject();
+        delete reviewWithoutV.__v;
 
         return res.status(201).json({
-            items: newReview,
+            items: [reviewWithoutV],
             message: 'Review created successfully',
             status: 'success'
         });

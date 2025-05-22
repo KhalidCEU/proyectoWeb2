@@ -6,7 +6,7 @@ export const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
 
-        const user = await User.findById(id);
+        const user = await User.findById(id).select('-__v');;
 
         if (!user) {
             return res.status(404).json({
@@ -78,7 +78,11 @@ export const updateUser = async (req, res) => {
             });
         }
 
-        const updatedUser = await User.findByIdAndUpdate(id, updateData, { new: true });
+        const updatedUser = await User.findByIdAndUpdate(
+            id,
+            updateData,
+            { new: true, select: '-__v' }
+        );
 
         if (!updatedUser) {
             return res.status(404).json({
@@ -137,8 +141,16 @@ export const getFavorites = async (req, res) => {
             });
         }
 
+        if (user.favorites.length == 0) {
+            return res.status(404).json({
+                message: "No favorites available",
+                status: "failure"
+            });
+        }
+
         return res.status(200).json({
-            items: user.favorites || [],
+            items: user.favorites,
+            message: "Favorites data fetched succesfully.",
             status: "success"
         });
 

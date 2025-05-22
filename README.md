@@ -12,9 +12,11 @@ This repository is dedicated to the 'Sistemas Web II' course project.
 
 **The goal**: Create a comprehensive **RESTful API** using **Node.js** that integrates with **MongoDB**, a non-relational database. The API will support both **JSON and XML** message formats, enabling flexible data exchange.
 
-**What are we building**: A **Sneakers** API
+**What we built**: A **Sneakers** API
 
 **The Chosen Stack**: Node.js & Express, MongoDB as the database, with Typescript as the language.
+
+All **documentation** can be found in the [docs](/docs/) directory.
 
 ## Usage 🕹
 
@@ -41,16 +43,16 @@ This repository is dedicated to the 'Sistemas Web II' course project.
     Then **run (dev mode)** - Start the development server.
 
     ```bash
-      npm run dev
-      # or
-      yarn dev
-      # or
-      pnpm dev
-      # or
-      bun dev
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
     ```
 
-    This will launch the server on port 8080 (```http://localhost:8080/```)
+    This will launch the server on **port 8080** (```http://localhost:8080/```)
 
 ### Production build
 
@@ -69,4 +71,4 @@ bun run build && bun run start
 
 ## License 📃
 
-This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
+This project is licensed under the **MIT** License - see the [LICENSE](/LICENSE) file for details.

@@ -10,7 +10,7 @@
     - [x] There are at least 3 resources and they are related to each other (sneakers, users, reviews).
     - [x] One of the collections has at least **1000 documents**
         - [x] There is a **dataset** to seed this collection in the repository ( -> this dataset is in **JSON format**)
-        - [ ] At least one route allows pagination
+        - [x] At least one route allows pagination
         - [x] At least one route allows filtering data to search inside this collection
 
 - [x] Uses an external API

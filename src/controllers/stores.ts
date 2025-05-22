@@ -2,7 +2,7 @@ import { Store } from "../schemas/store";
 
 export const getStores = async (req, res) => {
     try {
-        const stores = await Store.find();
+        const stores = await Store.find().select('-__v');
 
         if (!stores.length) {
             return res.status(404).json({ message: "No stores found", status: "failure" });
@@ -24,7 +24,7 @@ export const getStoreById = async (req, res) => {
     try {
         const { storeId } = req.params;
 
-        const store = await Store.findOne({ _id: storeId });
+        const store = await Store.findOne({ _id: storeId }).select('-__v');
 
         if (!store) {
             return res
@@ -36,7 +36,8 @@ export const getStoreById = async (req, res) => {
         }
 
         return res.status(200).json({
-                items: store,
+                items: [store],
+                message: "Store data fetched succesfully",
                 status: "success"
         });
 
@@ -50,27 +51,23 @@ export const getStoreById = async (req, res) => {
 
 export const createStore = async (req, res) => {
     try {
-        const storeData = req.body;
-        const store = await Store.insertOne(storeData);
-
-        const address = storeData.address;
+        const { address } = req.body;
 
         if (!address || address.length < 10 || address.length > 100) {
-            return res
-                .status(400)
-                .json({
-                    message: 'Invalid input data',
-                    status: 'failure'
-                });
+            return res.status(400).json({
+                message: 'Invalid input data',
+                status: 'failure'
+            });
         }
 
-        return res
-            .status(201)
-            .json({
-                items: store,
-                message: 'Store created successfully',
-                status: 'success'
-            });
+        const store = new Store({ address });
+        await store.save();
+
+        return res.status(201).json({
+            items: [store],
+            message: 'Store created successfully',
+            status: 'success'
+        });
 
     } catch (error) {
         return res.status(500).json({
@@ -97,7 +94,7 @@ export const updateStoreById = async (req, res) => {
         const updatedStore = await Store.findOneAndUpdate(
             { _id: storeId },
             updateData,
-            { new: true }
+            { new: true, select: '-__v' }
         );
 
         if (!updatedStore) {
@@ -108,7 +105,7 @@ export const updateStoreById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: updatedStore,
+            items: [updatedStore],
             message: "Store successfully updated",
             status: "success"
         });
@@ -134,7 +131,7 @@ export const deleteStoreById = async (req, res) => {
             });
         }
 
-        return res.status(204);
+        return res.status(204).send();
 
     } catch (error) {
         return res.status(500).json({
