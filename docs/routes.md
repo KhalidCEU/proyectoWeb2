@@ -14,6 +14,10 @@ Query Parameters:
     - Minimum: 1
     - Maximum: 100
     - Default: 20
+- `offset`: Number of items to skip before starting to collect the result set (useful for **pagination**)
+    - Type: integer
+    - Minimum: 0
+    - Default: 0
 - `currency`: Currency in which prices should be returned. See [currencies.md](/docs/currencies.md) for the list of **valid** currencies.
     - Type: string
 
@@ -27,6 +31,9 @@ Examples:
 
 # Get 2 sneakers released after October 22, 2021, priced in EUR
 sneakers?currency=eur&limit=2&release_date_after=2021-10-22
+
+ # Get 2 sneakers released after October 22, 2021, priced in EUR, skipping the first 5
+/sneakers?currency=eur&limit=2&offset=5&release_date_after=2021-10-22
 ```
 
 **GET**	/sneakers/{id} : Get a specific sneaker information

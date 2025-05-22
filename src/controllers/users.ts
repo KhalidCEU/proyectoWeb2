@@ -6,7 +6,7 @@ export const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
 
-        const user = await User.findById(id);
+        const user = await User.findById(id).select('-__v');;
 
         if (!user) {
             return res.status(404).json({
@@ -78,7 +78,11 @@ export const updateUser = async (req, res) => {
             });
         }
 
-        const updatedUser = await User.findByIdAndUpdate(id, updateData, { new: true });
+        const updatedUser = await User.findByIdAndUpdate(
+            id,
+            updateData,
+            { new: true, select: '-__v' }
+        );
 
         if (!updatedUser) {
             return res.status(404).json({

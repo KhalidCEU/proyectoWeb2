@@ -3,7 +3,10 @@ import { Review } from "../schemas/review";
 export const getReviewById = async (req, res) => {
     try {
         const { reviewId } = req.params;
-        const review = await Review.findById(reviewId);
+
+        const review = await Review
+            .findById(reviewId)
+            .select('-__v');
 
         if (!review) {
             return res.status(404).json({
@@ -31,7 +34,7 @@ export const updateReviewById = async (req, res) => {
         const updatedReview = await Review.findByIdAndUpdate(
             reviewId,
             req.body,
-            { new: true }
+            { new: true, select: '-__v' }
         );
 
         if (!updatedReview) {

@@ -93,7 +93,7 @@ export const updateStoreById = async (req, res) => {
         const updatedStore = await Store.findOneAndUpdate(
             { _id: storeId },
             updateData,
-            { new: true }
+            { new: true, select: '-__v' }
         );
 
         if (!updatedStore) {
