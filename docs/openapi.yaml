@@ -904,7 +904,7 @@ components:
         _id:
           type: string
           readOnly: true
-        adress:
+        address:
           type: string
           minLength: 10
           maxLength: 100
