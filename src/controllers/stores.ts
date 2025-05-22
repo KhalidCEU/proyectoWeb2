@@ -76,8 +76,6 @@ export const createStore = async (req, res) => {
     }
 };
 
-
-
 export const updateStoreById = async (req, res) => {
     try {
         const { storeId } = req.params;
