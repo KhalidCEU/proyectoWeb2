@@ -2,7 +2,7 @@ import { Store } from "../schemas/store";
 
 export const getStores = async (req, res) => {
     try {
-        const stores = await Store.find();
+        const stores = await Store.find().select('-__v');
 
         if (!stores.length) {
             return res.status(404).json({ message: "No stores found", status: "failure" });
@@ -24,7 +24,7 @@ export const getStoreById = async (req, res) => {
     try {
         const { storeId } = req.params;
 
-        const store = await Store.findOne({ _id: storeId });
+        const store = await Store.findOne({ _id: storeId }).select('-__v');
 
         if (!store) {
             return res
@@ -36,7 +36,8 @@ export const getStoreById = async (req, res) => {
         }
 
         return res.status(200).json({
-                items: store,
+                items: [store],
+                message: "Store data fetched succesfully",
                 status: "success"
         });
 
@@ -63,7 +64,7 @@ export const createStore = async (req, res) => {
         await store.save();
 
         return res.status(201).json({
-            items: store,
+            items: [store],
             message: 'Store created successfully',
             status: 'success'
         });
@@ -104,7 +105,7 @@ export const updateStoreById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: updatedStore,
+            items: [updatedStore],
             message: "Store successfully updated",
             status: "success"
         });

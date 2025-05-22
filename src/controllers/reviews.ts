@@ -15,7 +15,7 @@ export const getReviewById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: review,
+            items: [review],
             message: "Review successfully updated",
             status: "success"
         });
@@ -42,7 +42,7 @@ export const updateReviewById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: updatedReview,
+            items: [updatedReview],
             message: "Store successfully updated",
             status: "success"
         });

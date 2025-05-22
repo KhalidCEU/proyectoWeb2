@@ -13,7 +13,6 @@ export const getProviders = async (req, res) => {
 
         return res.status(200).json({
             items: providers,
-            count: providers.length,
             message: 'Providers data fetched successfully',
             status: 'success'
         });
@@ -42,7 +41,7 @@ export const getProviderById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: provider,
+            items: [provider],
             message: 'Provider data fetched successfully',
             status: 'success'
         });
@@ -69,7 +68,7 @@ export const createProvider = async (req, res) => {
         const provider = await Provider.insertOne(providerData);
 
         return res.status(201).json({
-            items: provider,
+            items: [provider],
             message: 'Provider created successfully',
             status: 'success'
         });
@@ -108,7 +107,7 @@ export const updateProviderById = async (req, res) => {
         }
 
         return res.status(200).json({
-            items: provider,
+            items: [provider],
             message: 'Provider updated successfully',
             status: 'success'
         });

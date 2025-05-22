@@ -94,7 +94,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/SneakersResponse'
         '400':
           description: Invalid input data
           content:
@@ -120,7 +120,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/SneakersResponse'
         '404':
           description: Sneaker not found
           content:
@@ -151,7 +151,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/SneakersResponse'
         '400':
           description: Invalid input data
           content:
@@ -205,9 +205,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Review'
+                $ref: '#/components/schemas/ReviewsResponse'
         '404':
           description: Sneaker not found or no reviews available
           content:
@@ -469,9 +467,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Sneaker'
+                $ref: '#/components/schemas/SneakersResponse'
         '404':
           description: User not found or no favorites available
           content:
@@ -684,9 +680,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Store'
+                  $ref: '#/components/schemas/StoresResponse'
         '404':
           description: No stores found
           content:
@@ -711,7 +705,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Store'
+                $ref: '#/components/schemas/StoresResponse'
         '400':
           description: Invalid input data
           content:
@@ -737,7 +731,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Store'
+                $ref: '#/components/schemas/StoresResponse'
         '404':
           description: Store not found
           content:
@@ -768,7 +762,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Store'
+                $ref: '#/components/schemas/StoresResponse'
         '400':
           description: Invalid input data
           content:
@@ -832,6 +826,20 @@ components:
           type: string
         status:
           type: string
+      required: [items, message, status]
+      example:
+        items:
+          - _id: "682e705bba67c219ffaba3e5"
+            name: "string"
+            color: "string"
+            release_date: "2025-05-22T00:30:33.514Z"
+            brand: "string"
+            modelKey: "string"
+            size: 0
+            retail_price: 0
+            sales_price: 0
+        message: 'string'
+        status: 'success'
 
     Sneaker:
       type: object
@@ -941,6 +949,8 @@ components:
       type: object
       properties:
         items:
+          type: array
+          items:
             $ref: '#/components/schemas/Review'
         message:
           type: string
@@ -967,7 +977,9 @@ components:
       type: object
       properties:
         items:
-          $ref: '#/components/schemas/Provider'
+          type: array
+          items:
+            $ref: '#/components/schemas/Provider'
         message:
           type: string
         status:
@@ -985,6 +997,20 @@ components:
           type: string
           minLength: 10
           maxLength: 100
+
+    StoresResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Store'
+        message:
+          type: string
+        status:
+          type: string
+          enum: [success]
+      required: [items, message, status]
 
     # Status code schemas
 

@@ -141,8 +141,16 @@ export const getFavorites = async (req, res) => {
             });
         }
 
+        if (user.favorites.length == 0) {
+            return res.status(404).json({
+                message: "No favorites available",
+                status: "failure"
+            });
+        }
+
         return res.status(200).json({
-            items: user.favorites || [],
+            items: user.favorites,
+            message: "Favorites data fetched succesfully.",
             status: "success"
         });
 

@@ -91,7 +91,6 @@ export const getSneakers = async (req, res) => {
     }
 };
 
-
 export const getSneakerById = async (req, res) => {
     try {
         const { sneakerId } = req.params;
@@ -112,7 +111,7 @@ export const getSneakerById = async (req, res) => {
         return res
             .status(200)
             .json({
-                items: sneaker,
+                items: [sneaker],
                 message: 'Sneaker data fetched succesfully.',
                 status: 'success'
             })
@@ -130,12 +129,15 @@ export const getSneakerById = async (req, res) => {
 export const createSneaker = async (req, res) => {
     try {
         const sneakerData = req.body;
-        const sneaker = await Sneaker.insertOne(sneakerData);
+        const sneaker = await Sneaker.create(sneakerData);
+
+        const sneakerWithoutV = sneaker.toObject();
+        delete sneakerWithoutV.__v;
 
         return res
             .status(201)
             .json({
-                items: sneaker,
+                items: [sneakerWithoutV],
                 message: 'Sneaker created successfully',
                 status: 'success'
             });
@@ -173,7 +175,7 @@ export const updateSneakerById = async (req, res) => {
         return res
             .status(200)
             .json({
-                items: sneaker,
+                items: [sneaker],
                 message: 'Sneaker updated successfully',
                 status: 'success'
             });
@@ -203,13 +205,7 @@ export const deleteSneakerById = async (req, res) => {
                 });
         }
 
-        return res
-            .status(200)
-            .json({
-                items: sneaker,
-                message: 'Sneaker deleted successfully',
-                status: 'success'
-            });
+        return res.status(204).send();
 
     } catch (error) {
         return res
@@ -220,7 +216,6 @@ export const deleteSneakerById = async (req, res) => {
             });
     }
 };
-
 
 export const getSneakerReviews = async (req, res) => {
     const { sneakerId } = req.params;
@@ -236,7 +231,7 @@ export const getSneakerReviews = async (req, res) => {
             });
         }
 
-        const reviews = await Review.find({ sneakerId }).sort({ date: -1 });
+        const reviews = await Review.find({ sneakerId }).select('-__v').sort({ date: -1 });
 
         if (!reviews || reviews.length === 0) {
             return res.status(404).json({
@@ -245,7 +240,11 @@ export const getSneakerReviews = async (req, res) => {
             });
         }
 
-        return res.status(200).json(reviews);
+        return res.status(200).json({
+            items: reviews,
+            message: 'Reviews data fetched successfully',
+            status: 'success'
+        });
 
     } catch (error) {
 
@@ -255,8 +254,6 @@ export const getSneakerReviews = async (req, res) => {
         });
     }
 };
-
-
 
 export const createSneakerReview = async (req, res) => {
     const { sneakerId } = req.params;
@@ -294,13 +291,15 @@ export const createSneakerReview = async (req, res) => {
             userId,
             comment,
             date: new Date()
-        })
+        });
 
         await newReview.save();
 
+        const reviewWithoutV = newReview.toObject();
+        delete reviewWithoutV.__v;
 
         return res.status(201).json({
-            items: newReview,
+            items: [reviewWithoutV],
             message: 'Review created successfully',
             status: 'success'
         });
